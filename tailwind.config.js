@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["font1", "sans-serif"], // Use your custom font
+      },
       animation: {
         meteor: "meteor 5s linear infinite",
       },
