@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import framer-motion
-import backgroundImage from "./assets/images/Group9.png"; // Adjust the path to your local image
-import petalImage from "./assets/images/petal.png"; // Add the path to your petal image
-import bg from "./assets/images/bg2.webp";
-import logo from "./assets/images/logo.png"; // Import your logo
-import movingImage from "./assets/images/movingimage.webp"; // Image to move based on scroll
+
 import Navbar from "./Components/Navbar";
 import { FadeDown } from "./Components/fadedown";
 
@@ -23,7 +19,7 @@ export default function App() {
       petals.push(
         <motion.img
           key={i}
-          src={petalImage}
+          src="/assets/images/petal.png"
           alt="falling petal"
           className="falling-petal"
           style={{
@@ -67,7 +63,7 @@ export default function App() {
       images.push(
         <motion.img
           key={i}
-          src={movingImage}
+          src="/assets/images/movingimage.webp"
           alt="Moving Image"
           style={{
             width: "800px", // Increased width of each moving image
@@ -85,7 +81,7 @@ export default function App() {
       {/* First section with falling petals and logo */}
       <section
         style={{
-          backgroundImage: `url(${bg})`, // Use the imported background image
+          backgroundImage: `url("/assets/images/bg2.webp")`, // Use the imported background image
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh", // Adjust the height to fill the viewport
@@ -127,7 +123,7 @@ export default function App() {
           }}
         >
           <motion.img
-            src={logo} // Logo image source
+            src="/assets/Images/logo.png" // Logo image source
             alt="Logo"
             style={{
               width: "60vw", // Use responsive units for width
