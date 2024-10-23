@@ -2,13 +2,13 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
+    <div className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2  border rounded-full bottom-4 left-1/2  bg-gray-700 border-gray-600">
       <div className="grid h-full max-w-lg grid-cols-4 mx-auto relative">
         
         {/* Home Button */}
         <button
           type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-50 dark:hover:bg-gray-800 group"
+          className="relative inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-800 group"
         >
           <svg
             className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Day1 Button */}
         <button
           type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 text-slate-400 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+          className="relative inline-flex flex-col items-center justify-center px-5 text-slate-400  hover:bg-gray-800 group"
         >
           <p className="text-center text-lg">Day1</p>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
         {/* Day2 Button */}
         <button
           type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5  text-slate-400 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+          className="relative inline-flex flex-col items-center justify-center px-5  text-slate-400  hover:bg-gray-800 group"
         >
           <p className="text-center text-lg">Day2</p>
 
@@ -56,10 +56,10 @@ const Navbar = () => {
         {/* Register Button */}
         <button
           type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group"
+          className="relative inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-800 group"
         >
           <svg
-            className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            className="w-5 h-5 mb-1 text-gray-500 group-hover:text-blue-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

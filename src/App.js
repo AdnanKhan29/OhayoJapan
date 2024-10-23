@@ -133,7 +133,6 @@ export default function App() {
               width: "60vw", // Use responsive units for width
               height: "auto", // Maintain aspect ratio
               maxWidth: "400px", // Set a max width for larger screens
-              filter: "brightness(0) invert(1)", // Adjust logo to be visible on dark background
             }}
           />
         </motion.div>
