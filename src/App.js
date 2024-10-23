@@ -5,6 +5,7 @@ import petalImage from "./assets/images/petal.png"; // Add the path to your peta
 import bg from "./assets/images/bg2.webp";
 import logo from "./assets/images/logo.png"; // Import your logo
 import movingImage from "./assets/images/movingimage.webp"; // Image to move based on scroll
+import Navbar from "./Components/Navbar";
 import { FadeDown } from "./Components/fadedown";
 
 export default function App() {
@@ -208,6 +209,7 @@ export default function App() {
           }
         }
       `}</style>
+      <Navbar />
     </>
   );
 }
