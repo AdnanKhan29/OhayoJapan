@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import framer-motion
-
+import { TypeAnimation } from "react-type-animation";
 import Navbar from "./Components/Navbar";
 import { FadeDown } from "./Components/fadedown";
 
@@ -28,7 +28,6 @@ export default function App() {
             animationDuration: `${randomDuration}s`, // Random fall duration
             animationDelay: `${randomDelay}s`, // Random delay before fall
           }}
-          // Motion for realistic fall: slight horizontal sway and rotation
           animate={{
             y: ["-10%", "110vh"], // Falling from above the viewport to below
             x: ["0%", "5%", "-3%", "2%"], // Simulate horizontal swaying
@@ -160,16 +159,103 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* Section with title, paragraph, and button */}
+      {/* Combined section for FadeDown and company logos */}
       <section
         style={{
-          backgroundColor: "#1e1e1e", // Dark background color
+          backgroundColor: "#000000", // Same dark background color to maintain theme
           padding: "100px 20px", // Spacing for the section
           textAlign: "center",
           color: "#fff", // Light text color for dark theme
         }}
       >
-        <FadeDown></FadeDown>
+        {/* Typing text animation */}
+        <TypeAnimation
+          sequence={[
+            "In Collaboration With",
+            2000,
+            "In Collaboration With",
+            2000,
+            "In Collaboration With",
+            2000,
+          ]}
+          wrapper="h1"
+          speed={50}
+          className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12" // Tailwind classes for responsive styling
+          repeat={Infinity}
+        />
+
+        {/* Company Logos and Text */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around", // Space logos evenly
+            flexWrap: "wrap", // Allow logos to wrap on smaller screens
+            gap: "20px", // Add some spacing between logos
+            marginTop: "50px", // Spacing between FadeDown and logos
+          }}
+        >
+          {/* Company Logo and Text */}
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/assets/images/jetaa.png" // Add your logo image source
+              alt="JETAA"
+              style={{
+                width: "150px", // Set a width for the logo
+                height: "auto", // Maintain aspect ratio
+              }}
+            />
+            <p
+              style={{
+                marginTop: "10px",
+                fontSize: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              JETAA
+            </p>{" "}
+            {/* Company Name */}
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/assets/images/jal.png"
+              alt="Company 2"
+              style={{
+                width: "150px",
+                height: "auto",
+              }}
+            />
+            <p
+              style={{
+                marginTop: "10px",
+                fontSize: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              JAPAN AIRLINES
+            </p>
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/assets/images/jetaa.png"
+              alt="JETAA"
+              style={{
+                width: "150px",
+                height: "auto",
+              }}
+            />
+            <p
+              style={{
+                marginTop: "10px",
+                fontSize: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              JETAA
+            </p>
+          </div>
+        </div>
       </section>
 
       <style jsx>{`
@@ -194,16 +280,12 @@ export default function App() {
 
         @media (min-width: 768px) {
           h1 {
-            font-size: 4vw;
-          }
-          p {
-            font-size: 2vw;
-          }
-          button {
-            padding: 1vw 2vw;
+            font-size: 10vw;
           }
         }
+        }
       `}</style>
+
       <Navbar />
     </>
   );
