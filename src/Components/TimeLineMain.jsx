@@ -1,8 +1,10 @@
 
 import React from "react";
 import { Timeline } from "./timeline";
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+// import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { TextGenerateEffect } from "./text-generator";
 export function TimelineDemo() {
+    const   words1="Built and launched Aceternity UI and Aceternity UI Pro from scratch";
   const data = [
     {
       title: "2024",
@@ -11,8 +13,10 @@ export function TimelineDemo() {
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
           Event 1
         </h1>
+
+
         <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch
+         <TextGenerateEffect words={words1}/>
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <img
@@ -33,25 +37,27 @@ export function TimelineDemo() {
       title: "Early 2023",
       content: (
         <div className="">
-  <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-    Event 1
-  </h1>
-  <p className="text-neutral-800 dark:text-neutral-200 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-    Built and launched Aceternity UI and Aceternity UI Pro from scratch
-  </p>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    <img
-      src="https://assets.aceternity.com/templates/startup-1.webp"
-      alt="startup template"
-      className="rounded-lg object-cover h-40 sm:h-44 md:h-60 lg:h-72 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-    />
-    <img
-      src="https://assets.aceternity.com/templates/startup-2.webp"
-      alt="startup template"
-      className="rounded-lg object-cover h-40 sm:h-44 md:h-60 lg:h-72 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-    />
-  </div>
-</div>
+        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
+          Event 1
+        </h1>
+
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
+         <TextGenerateEffect words={words1}/>
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <img
+            src="https://assets.aceternity.com/templates/startup-1.webp"
+            alt="startup template"
+            className="rounded-lg object-cover h-40 sm:h-44 md:h-60 lg:h-72 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-2.webp"
+            alt="startup template"
+            className="rounded-lg object-cover h-40 sm:h-44 md:h-60 lg:h-72 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
 
 
       ),
@@ -122,3 +128,5 @@ export function TimelineDemo() {
     </div>)
   );
 }
+
+
