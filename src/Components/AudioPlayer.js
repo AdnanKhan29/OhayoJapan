@@ -5,37 +5,26 @@ import "./AudioPlayer.css"; // Import the custom CSS for styling
 
 export default function AudioPlayer() {
   const audioRef = useRef(null); // Reference to the audio element
-  const [isPlaying, setIsPlaying] = useState(false); // Tracks if the audio is playing
+  const [isPlaying, setIsPlaying] = useState(false); // Initially set to false until user interaction
 
+  // Automatically play the audio when the component is mounted
   useEffect(() => {
     const audioElement = audioRef.current;
 
-    const startAudioOnInteraction = () => {
-      if (!isPlaying && audioElement) {
-        audioElement
-          .play()
-          .then(() => {
-            setIsPlaying(true); // Set to true once the audio starts playing
-          })
-          .catch((error) => {
-            console.log("Autoplay failed:", error);
-          });
-      }
-    };
+    // Try to play the audio automatically
+    if (audioElement) {
+      audioElement
+        .play()
+        .then(() => {
+          setIsPlaying(true); // Set to true once the audio starts playing
+        })
+        .catch((error) => {
+          console.log("Auto-play was prevented by the browser:", error); // Auto-play might be blocked by the browser
+        });
+    }
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
-    // Add event listeners for user interaction
-    window.addEventListener("click", startAudioOnInteraction);
-    window.addEventListener("scroll", startAudioOnInteraction);
-    window.addEventListener("keydown", startAudioOnInteraction);
-
-    // Clean up event listeners on unmount
-    return () => {
-      window.removeEventListener("click", startAudioOnInteraction);
-      window.removeEventListener("scroll", startAudioOnInteraction);
-      window.removeEventListener("keydown", startAudioOnInteraction);
-    };
-  }, [isPlaying]);
-
+  // Toggle play/pause functionality
   const togglePlayPause = () => {
     const audioElement = audioRef.current;
     if (isPlaying) {
@@ -43,7 +32,7 @@ export default function AudioPlayer() {
     } else {
       audioElement.play();
     }
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying); // Toggle the play/pause state
   };
 
   return (
@@ -53,12 +42,9 @@ export default function AudioPlayer() {
         Your browser does not support the audio tag.
       </audio>
 
+      {/* Play or Pause button with Font Awesome icons */}
       <button className="audio-button" onClick={togglePlayPause}>
-        {isPlaying ? (
-          <FontAwesomeIcon icon={faPause} size="2x" />
-        ) : (
-          <FontAwesomeIcon icon={faPlay} size="2x" />
-        )}
+        <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="2x" />
       </button>
     </div>
   );
