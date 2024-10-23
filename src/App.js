@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "./Components/Navbar";
 import Meteors from "./Components/Meteor";
+import { Route, Routes } from "react-router-dom";
+import { TimelineDemo } from "./Components/TimeLineMain";
 
 export default function App() {
   const [scrollX, setScrollX] = useState(0);
@@ -85,213 +87,225 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  const Home = ()=>{
+    return (
+      <>
+        <section
+          style={{
+            backgroundImage: `url("/assets/images/bg2.webp")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div className="falling-petals-container">
+            {generateRandomPetals(25)}
+          </div>
+  
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            style={{
+              zIndex: 2,
+              textAlign: "center",
+            }}
+          >
+            <motion.img
+              src="/assets/Images/logo.png"
+              alt="Logo"
+              style={{
+                width: "60vw",
+                height: "auto",
+                maxWidth: "400px",
+              }}
+            />
+          </motion.div>
+        </section>
+  
+        <section
+          style={{
+            backgroundColor: "#f0f0f0", // Light background
+            height: "600px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <motion.div
+            style={{
+              display: "flex",
+              width: "100%",
+              position: "absolute",
+              left: `${-scrollX * 0.2}px`,
+              whiteSpace: "nowrap",
+            }}
+          >
+            {generateMovingImages(10)}
+          </motion.div>
+        </section>
+  
+        <section
+          ref={typingSectionRef} // Attach the ref to this section
+          style={{
+            backgroundColor: "#ffffff", // White background for light theme
+            padding: "100px 20px",
+            textAlign: "center",
+            color: "#000000", // Black text for light theme
+          }}
+        >
+          {/* Typing animation only starts when the section is in view */}
+          {startTyping && (
+            <TypeAnimation
+              sequence={[
+                "In Collaboration With",
+                2000,
+                "In Collaboration With",
+                2000,
+                "In Collaboration With",
+                2000,
+              ]}
+              wrapper="h1"
+              speed={50}
+              className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12"
+              repeat={Infinity}
+            />
+          )}
+  
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              flexWrap: "wrap",
+              gap: "20px",
+              marginTop: "50px",
+            }}
+          >
+            <div style={{ textAlign: "center" }}>
+              <img
+                src="/assets/images/jetaa.png"
+                alt="JETAA"
+                style={{
+                  width: "150px",
+                  height: "auto",
+                }}
+              />
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                JETAA
+              </p>
+            </div>
+  
+            <div style={{ textAlign: "center" }}>
+              <img
+                src="/assets/images/jal.png"
+                alt="Company 2"
+                style={{
+                  width: "150px",
+                  height: "auto",
+                }}
+              />
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                JAPAN AIRLINES
+              </p>
+            </div>
+  
+            <div style={{ textAlign: "center" }}>
+              <img
+                src="/assets/images/jetaain.png"
+                alt="JETAA"
+                style={{
+                  width: "150px",
+                  height: "auto",
+                }}
+              />
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                JETAA INDIA
+              </p>
+            </div>
+          </div>
+        </section>
+  
+        {/* NEW SECTION */}
+        <section
+          style={{
+            backgroundColor: "#ffffff", // Light background color
+            padding: "100px 20px",
+            textAlign: "center",
+            color: "#000000", // Black text for contrast
+          }}
+        >
+          <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+            <Meteors number={30} />
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent">
+              Meteors
+            </span>
+          </div>
+        </section>
+  
+        <style jsx>{`
+          .falling-petals-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+          }
+  
+          .falling-petal {
+            position: absolute;
+            top: -10%;
+            width: 3vw;
+            height: 3vw;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+  
+          @media (min-width: 768px) {
+            h1 {
+              font-size: 10vw;
+            }
+          }
+        `}</style>
+  
+        
+      </>
+    );
+  }
   return (
     <>
-      <section
-        style={{
-          backgroundImage: `url("/assets/images/bg2.webp")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div className="falling-petals-container">
-          {generateRandomPetals(25)}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          style={{
-            zIndex: 2,
-            textAlign: "center",
-          }}
-        >
-          <motion.img
-            src="/assets/Images/logo.png"
-            alt="Logo"
-            style={{
-              width: "60vw",
-              height: "auto",
-              maxWidth: "400px",
-            }}
-          />
-        </motion.div>
-      </section>
-
-      <section
-        style={{
-          backgroundColor: "#f0f0f0", // Light background
-          height: "600px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <motion.div
-          style={{
-            display: "flex",
-            width: "100%",
-            position: "absolute",
-            left: `${-scrollX * 0.2}px`,
-            whiteSpace: "nowrap",
-          }}
-        >
-          {generateMovingImages(10)}
-        </motion.div>
-      </section>
-
-      <section
-        ref={typingSectionRef} // Attach the ref to this section
-        style={{
-          backgroundColor: "#ffffff", // White background for light theme
-          padding: "100px 20px",
-          textAlign: "center",
-          color: "#000000", // Black text for light theme
-        }}
-      >
-        {/* Typing animation only starts when the section is in view */}
-        {startTyping && (
-          <TypeAnimation
-            sequence={[
-              "In Collaboration With",
-              2000,
-              "In Collaboration With",
-              2000,
-              "In Collaboration With",
-              2000,
-            ]}
-            wrapper="h1"
-            speed={50}
-            className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12"
-            repeat={Infinity}
-          />
-        )}
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            flexWrap: "wrap",
-            gap: "20px",
-            marginTop: "50px",
-          }}
-        >
-          <div style={{ textAlign: "center" }}>
-            <img
-              src="/assets/images/jetaa.png"
-              alt="JETAA"
-              style={{
-                width: "150px",
-                height: "auto",
-              }}
-            />
-            <p
-              style={{
-                marginTop: "10px",
-                fontSize: "20px",
-                fontWeight: "bold",
-              }}
-            >
-              JETAA
-            </p>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <img
-              src="/assets/images/jal.png"
-              alt="Company 2"
-              style={{
-                width: "150px",
-                height: "auto",
-              }}
-            />
-            <p
-              style={{
-                marginTop: "10px",
-                fontSize: "20px",
-                fontWeight: "bold",
-              }}
-            >
-              JAPAN AIRLINES
-            </p>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <img
-              src="/assets/images/jetaain.png"
-              alt="JETAA"
-              style={{
-                width: "150px",
-                height: "auto",
-              }}
-            />
-            <p
-              style={{
-                marginTop: "10px",
-                fontSize: "20px",
-                fontWeight: "bold",
-              }}
-            >
-              JETAA INDIA
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* NEW SECTION */}
-      <section
-        style={{
-          backgroundColor: "#ffffff", // Light background color
-          padding: "100px 20px",
-          textAlign: "center",
-          color: "#000000", // Black text for contrast
-        }}
-      >
-        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-          <Meteors number={30} />
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent">
-            Meteors
-          </span>
-        </div>
-      </section>
-
-      <style jsx>{`
-        .falling-petals-container {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          overflow: hidden;
-        }
-
-        .falling-petal {
-          position: absolute;
-          top: -10%;
-          width: 3vw;
-          height: 3vw;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-
-        @media (min-width: 768px) {
-          h1 {
-            font-size: 10vw;
-          }
-        }
-      `}</style>
-
-      <Navbar />
+    <Routes>
+      <Route path ="/" element={<Home/>}/>
+      <Route path="/events" element={<TimelineDemo/>}/> 
+    </Routes>
+    <Navbar />
     </>
   );
 }
