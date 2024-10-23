@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "./Components/Navbar";
-import { FadeDown } from "./Components/fadedown";
+import Meteors from "./Components/Meteor";
 
 export default function App() {
-  const [scrollX, setScrollX] = useState(0); // State to track the scroll position
+  const [scrollX, setScrollX] = useState(0);
+  const [startTyping, setStartTyping] = useState(false); // State to trigger typing animation
+  const typingSectionRef = useRef(null); // Reference to the typing section
 
-  // Helper function to generate random positions for petals
   const generateRandomPetals = (numPetals) => {
     const petals = [];
     for (let i = 0; i < numPetals; i++) {
-      const randomLeft = Math.random() * 100; // Random horizontal position
-      const randomDuration = Math.random() * 5 + 10; // Random fall duration (10 to 15 seconds for a slower fall)
-      const randomDelay = Math.random() * 5; // Random delay before fall
-      const randomSize = Math.random() * 0.5 + 0.5; // Random size for petals (scale between 0.5 and 1)
+      const randomLeft = Math.random() * 100;
+      const randomDuration = Math.random() * 5 + 10;
+      const randomDelay = Math.random() * 5;
+      const randomSize = Math.random() * 0.5 + 0.5;
 
       petals.push(
         <motion.img
@@ -23,20 +24,20 @@ export default function App() {
           alt="falling petal"
           className="falling-petal"
           style={{
-            left: `${randomLeft}%`, // Random starting horizontal position
-            transform: `scale(${randomSize})`, // Vary the size of the petals
-            animationDuration: `${randomDuration}s`, // Random fall duration
-            animationDelay: `${randomDelay}s`, // Random delay before fall
+            left: `${randomLeft}%`,
+            transform: `scale(${randomSize})`,
+            animationDuration: `${randomDuration}s`,
+            animationDelay: `${randomDelay}s`,
           }}
           animate={{
-            y: ["-10%", "110vh"], // Falling from above the viewport to below
-            x: ["0%", "5%", "-3%", "2%"], // Simulate horizontal swaying
-            rotate: [0, 15, -15, 0], // Slight rotation for realism
+            y: ["-10%", "110vh"],
+            x: ["0%", "5%", "-3%", "2%"],
+            rotate: [0, 15, -15, 0],
           }}
           transition={{
-            repeat: Infinity, // Infinite loop for petals
-            ease: "easeInOut", // Smooth transition
-            duration: randomDuration, // Use the random duration for fall
+            repeat: Infinity,
+            ease: "easeInOut",
+            duration: randomDuration,
           }}
         />,
       );
@@ -44,18 +45,6 @@ export default function App() {
     return petals;
   };
 
-  // Update scroll position when user scrolls
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setScrollX(scrollY); // Track vertical scroll as horizontal movement for images
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Create an array of images to fill the width
   const generateMovingImages = (numImages) => {
     const images = [];
     for (let i = 0; i < numImages; i++) {
@@ -65,9 +54,9 @@ export default function App() {
           src="/assets/images/movingimage.webp"
           alt="Moving Image"
           style={{
-            width: "800px", // Increased width of each moving image
-            height: "600px", // Set the height of each image
-            objectFit: "cover", // Ensure image fits well in the container
+            width: "800px",
+            height: "600px",
+            objectFit: "cover",
           }}
         />,
       );
@@ -75,133 +64,134 @@ export default function App() {
     return images;
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScrollX(scrollY);
+
+      // Check if the typing section is in view
+      const section = typingSectionRef.current;
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight / 2;
+
+        if (sectionTop < triggerPoint) {
+          setStartTyping(true); // Start typing when section is in view
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      {/* First section with falling petals and logo */}
       <section
         style={{
-          backgroundImage: `url("/assets/images/bg2.webp")`, // Use the imported background image
+          backgroundImage: `url("/assets/images/bg2.webp")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh", // Adjust the height to fill the viewport
+          height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          overflow: "hidden", // Ensure the petals stay within the section
-          backgroundColor: "#1e1e1e", // Dark background color
+          overflow: "hidden",
         }}
       >
-        {/* Darker Overlay for background image */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark semi-transparent overlay
-            zIndex: 1, // Make sure it's below the logo and content but above the background image
-          }}
-        />
-
-        {/* Falling petals */}
         <div className="falling-petals-container">
-          {generateRandomPetals(25)}{" "}
-          {/* Generates 25 random realistic petals */}
+          {generateRandomPetals(25)}
         </div>
 
-        {/* Logo inside the hero section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           style={{
-            zIndex: 2, // Place logo above the overlay
+            zIndex: 2,
             textAlign: "center",
           }}
         >
           <motion.img
-            src="/assets/Images/logo.png" // Logo image source
+            src="/assets/Images/logo.png"
             alt="Logo"
             style={{
-              width: "60vw", // Use responsive units for width
-              height: "auto", // Maintain aspect ratio
-              maxWidth: "400px", // Set a max width for larger screens
+              width: "60vw",
+              height: "auto",
+              maxWidth: "400px",
             }}
           />
         </motion.div>
       </section>
 
-      {/* Section with the moving images */}
       <section
         style={{
-          backgroundColor: "#333", // Dark background color
-          height: "600px", // Define a fixed height for the moving image section
+          backgroundColor: "#f0f0f0", // Light background
+          height: "600px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          overflow: "hidden", // Ensure the images stay within the section
+          overflow: "hidden",
         }}
       >
-        {/* Container for moving images */}
         <motion.div
           style={{
             display: "flex",
-            width: "100%", // Make sure it stretches across the full width
+            width: "100%",
             position: "absolute",
-            left: `${-scrollX * 0.2}px`, // Move container of images based on scroll
-            whiteSpace: "nowrap", // Ensure images are aligned in a single row
+            left: `${-scrollX * 0.2}px`,
+            whiteSpace: "nowrap",
           }}
         >
-          {generateMovingImages(10)} {/* Generate multiple images */}
+          {generateMovingImages(10)}
         </motion.div>
       </section>
 
-      {/* Combined section for FadeDown and company logos */}
       <section
+        ref={typingSectionRef} // Attach the ref to this section
         style={{
-          backgroundColor: "#000000", // Same dark background color to maintain theme
-          padding: "100px 20px", // Spacing for the section
+          backgroundColor: "#ffffff", // White background for light theme
+          padding: "100px 20px",
           textAlign: "center",
-          color: "#fff", // Light text color for dark theme
+          color: "#000000", // Black text for light theme
         }}
       >
-        {/* Typing text animation */}
-        <TypeAnimation
-          sequence={[
-            "In Collaboration With",
-            2000,
-            "In Collaboration With",
-            2000,
-            "In Collaboration With",
-            2000,
-          ]}
-          wrapper="h1"
-          speed={50}
-          className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12" // Tailwind classes for responsive styling
-          repeat={Infinity}
-        />
+        {/* Typing animation only starts when the section is in view */}
+        {startTyping && (
+          <TypeAnimation
+            sequence={[
+              "In Collaboration With",
+              2000,
+              "In Collaboration With",
+              2000,
+              "In Collaboration With",
+              2000,
+            ]}
+            wrapper="h1"
+            speed={50}
+            className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12"
+            repeat={Infinity}
+          />
+        )}
 
-        {/* Company Logos and Text */}
         <div
           style={{
             display: "flex",
-            justifyContent: "space-around", // Space logos evenly
-            flexWrap: "wrap", // Allow logos to wrap on smaller screens
-            gap: "20px", // Add some spacing between logos
-            marginTop: "50px", // Spacing between FadeDown and logos
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            gap: "20px",
+            marginTop: "50px",
           }}
         >
-          {/* Company Logo and Text */}
           <div style={{ textAlign: "center" }}>
             <img
-              src="/assets/images/jetaa.png" // Add your logo image source
+              src="/assets/images/jetaa.png"
               alt="JETAA"
               style={{
-                width: "150px", // Set a width for the logo
-                height: "auto", // Maintain aspect ratio
+                width: "150px",
+                height: "auto",
               }}
             />
             <p
@@ -212,8 +202,7 @@ export default function App() {
               }}
             >
               JETAA
-            </p>{" "}
-            {/* Company Name */}
+            </p>
           </div>
 
           <div style={{ textAlign: "center" }}>
@@ -238,7 +227,7 @@ export default function App() {
 
           <div style={{ textAlign: "center" }}>
             <img
-              src="/assets/images/jetaa.png"
+              src="/assets/images/jetaain.png"
               alt="JETAA"
               style={{
                 width: "150px",
@@ -252,9 +241,26 @@ export default function App() {
                 fontWeight: "bold",
               }}
             >
-              JETAA
+              JETAA INDIA
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION */}
+      <section
+        style={{
+          backgroundColor: "#ffffff", // Light background color
+          padding: "100px 20px",
+          textAlign: "center",
+          color: "#000000", // Black text for contrast
+        }}
+      >
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+          <Meteors number={30} />
+          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent">
+            Meteors
+          </span>
         </div>
       </section>
 
@@ -265,14 +271,14 @@ export default function App() {
           left: 0;
           width: 100%;
           height: 100%;
-          pointer-events: none; // Ensures no interaction with the falling petals
+          pointer-events: none;
           overflow: hidden;
         }
 
         .falling-petal {
           position: absolute;
-          top: -10%; // Start offscreen at the top
-          width: 3vw; // Responsive size for the petals (this will be scaled dynamically)
+          top: -10%;
+          width: 3vw;
           height: 3vw;
           animation-timing-function: linear;
           animation-iteration-count: infinite;
@@ -282,7 +288,6 @@ export default function App() {
           h1 {
             font-size: 10vw;
           }
-        }
         }
       `}</style>
 
