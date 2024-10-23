@@ -41,8 +41,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <HyperText
         className="text-6xl font-bold text-black dark:text-white"
         text="DAY 1"
+        
         />
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm " >
           I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
           a timeline of my journey.
         </p>

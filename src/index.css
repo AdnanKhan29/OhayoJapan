@@ -14,3 +14,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/public/assets/font1.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

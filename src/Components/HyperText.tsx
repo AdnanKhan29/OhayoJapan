@@ -72,6 +72,7 @@ export function HyperText({
     <div
       className="overflow-hidden py-2 flex cursor-default scale-100"
       onMouseEnter={triggerAnimation}
+    
     >
       <AnimatePresence mode="wait">
         {displayText.map((letter, i) => (
@@ -79,6 +80,7 @@ export function HyperText({
             key={i}
             className={cn("font-mono", letter === " " ? "w-3" : "", className)}
             {...framerProps}
+            style={{ fontFamily: 'MyCustomFont' }}
           >
             {letter.toUpperCase()}
           </motion.h1>
