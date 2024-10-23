@@ -247,7 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW SECTION */}
       <section
         style={{
           backgroundColor: "#ffffff", // Light background color
@@ -258,10 +257,83 @@ export default function Home() {
       >
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
           <Meteors number={30} />
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent">
-            Meteors
+          <span
+            className="november-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent"
+            style={{
+              fontSize: "10vw", // Initial size for larger screens
+              maxWidth: "100vw", // Ensure text doesn't overflow the viewport
+            }}
+          >
+            NOVEMBER
           </span>
+          <span
+            className="date-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent mt-4"
+            style={{
+              fontSize: "5vw", // Initial size for larger screens
+              maxWidth: "100vw", // Ensure text doesn't overflow the viewport
+            }}
+          >
+            7TH AND 8TH
+          </span>
+
+          {/* Responsive dividing line with faded ends */}
+          <div
+            style={{
+              width: "60vw", // Use viewport width for responsiveness
+              maxWidth: "500px", // Maximum width to avoid it being too wide on large screens
+              height: "2px",
+              backgroundImage:
+                "linear-gradient(to right, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0))", // Faded ends
+              margin: "20px 0",
+            }}
+          ></div>
+
+          {/* Add information below the line */}
+          <p
+            style={{
+              fontSize: "18px", // Adjust font size as needed
+              color: "#333333", // Darker text for information
+              maxWidth: "600px", // Optional: limit the width for better readability
+              margin: "0 auto", // Center the paragraph
+            }}
+          >
+            Join us for an exciting event filled with insights, networking, and
+            collaboration. Be part of the journey on the 7th and 8th of
+            November, where innovation meets culture.
+          </p>
         </div>
+
+        <style jsx>{`
+          /* Responsive text for NOVEMBER */
+          .november-text {
+            font-size: 10vw;
+          }
+
+          /* Responsive text for 7TH AND 8TH */
+          .date-text {
+            font-size: 5vw;
+          }
+
+          /* Media queries to adjust text size for smaller screens */
+          @media (max-width: 768px) {
+            .november-text {
+              font-size: 12vw; /* Increase the size on small screens */
+            }
+            .date-text {
+              font-size: 6vw; /* Increase the size on small screens */
+            }
+          }
+
+          /* Media queries for extra-large screens */
+          @media (min-width: 1200px) {
+            .november-text {
+              font-size: 8vw; /* Slightly decrease the size for extra-large screens */
+            }
+            .date-text {
+              font-size: 4vw; /* Adjust the size for extra-large screens */
+            }
+          }
+        `}</style>
       </section>
 
       <style jsx>{`
