@@ -5,6 +5,7 @@ import petalImage from "./assets/images/petal.png"; // Add the path to your peta
 import bg from "./assets/images/bg2.webp";
 import logo from "./assets/images/logo.png"; // Import your logo
 import movingImage from "./assets/images/movingimage.webp"; // Image to move based on scroll
+import { FadeDown } from "./Components/fadedown";
 
 export default function App() {
   const [scrollX, setScrollX] = useState(0); // State to track the scroll position
@@ -92,12 +93,26 @@ export default function App() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden", // Ensure the petals stay within the section
+          backgroundColor: "#1e1e1e", // Dark background color
         }}
       >
+        {/* Darker Overlay for background image */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark semi-transparent overlay
+            zIndex: 1, // Make sure it's below the logo and content but above the background image
+          }}
+        />
+
         {/* Falling petals */}
         <div className="falling-petals-container">
           {generateRandomPetals(25)}{" "}
-          {/* Generates 15 random realistic petals */}
+          {/* Generates 25 random realistic petals */}
         </div>
 
         {/* Logo inside the hero section */}
@@ -117,15 +132,16 @@ export default function App() {
               width: "60vw", // Use responsive units for width
               height: "auto", // Maintain aspect ratio
               maxWidth: "400px", // Set a max width for larger screens
+              filter: "brightness(0) invert(1)", // Adjust logo to be visible on dark background
             }}
           />
         </motion.div>
       </section>
 
-      {/* New section with the moving image */}
+      {/* Section with the moving images */}
       <section
         style={{
-          backgroundColor: "#fff", // Use a plain background color
+          backgroundColor: "#333", // Dark background color
           height: "600px", // Define a fixed height for the moving image section
           display: "flex",
           justifyContent: "center",
@@ -148,61 +164,16 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* New section with title, paragraph, and button */}
+      {/* Section with title, paragraph, and button */}
       <section
         style={{
-          backgroundColor: "#f8f8f8", // Light background color for contrast
+          backgroundColor: "#1e1e1e", // Dark background color
           padding: "100px 20px", // Spacing for the section
           textAlign: "center",
+          color: "#fff", // Light text color for dark theme
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <h1
-            style={{
-              fontSize: "6vw", // Use responsive font size
-              marginBottom: "20px",
-              color: "#333",
-              maxWidth: "90vw", // Keep title within the viewport
-              lineHeight: "1.2",
-            }}
-          >
-            Welcome to Our Journey
-          </h1>
-          <p
-            style={{
-              fontSize: "4vw", // Responsive font size
-              marginBottom: "40px",
-              color: "#666",
-              maxWidth: "90vw", // Keep paragraph within the viewport
-              lineHeight: "1.6",
-            }}
-          >
-            Discover the beauty of nature and the joy of exploration. Let's
-            embark on an adventure that will leave a lasting impression on your
-            soul.
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            style={{
-              padding: "3vw 6vw", // Responsive padding
-              fontSize: "3vw", // Responsive font size
-              backgroundColor: "#333",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-              maxWidth: "300px", // Limit button size for larger screens
-              maxHeight: "60px",
-            }}
-          >
-            Explore More
-          </motion.button>
-        </motion.div>
+        <FadeDown></FadeDown>
       </section>
 
       <style jsx>{`
