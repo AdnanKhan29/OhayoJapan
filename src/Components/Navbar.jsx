@@ -1,80 +1,57 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import ShimmerButton from "./ShimmerButton";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2  border rounded-full bottom-4 left-1/2  bg-gray-700 border-gray-600">
-      <div className="grid h-full max-w-lg grid-cols-4 mx-auto relative">
-        
-        {/* Home Button */}
-        <button
-          type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-800 group"
-        >
-          <svg
-            className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-          </svg>
-          <span className="sr-only">Home</span>
-
-          {/* Tooltip */}
-          <div className="absolute bottom-12 w-24 text-center text-sm text-white bg-gray-900 rounded-lg py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Home
-          </div>
-        </button>
-
-        {/* Day1 Button */}
-        <button
-          type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 text-slate-400  hover:bg-gray-800 group"
-        >
-          <p className="text-center text-lg">Day1</p>
-
-          {/* Tooltip */}
-          <div className="absolute bottom-12 w-24 text-center text-sm text-white bg-gray-900 rounded-lg py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Day 1
-          </div>
-        </button>
-
-        {/* Day2 Button */}
-        <button
-          type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5  text-slate-400  hover:bg-gray-800 group"
-        >
-          <p className="text-center text-lg">Day2</p>
-
-          {/* Tooltip */}
-          <div className="absolute bottom-12 w-24 text-center text-sm text-white bg-gray-900 rounded-lg py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Day 2
-          </div>
-        </button>
-
-        {/* Register Button */}
-        <button
-          type="button"
-          className="relative inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-800 group"
-        >
-          <svg
-            className="w-5 h-5 mb-1 text-gray-500 group-hover:text-blue-500"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M16 2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Zm-2 14H6v-1a2 2 0 0 1 4 0v1h2v-1a2 2 0 0 1 4 0v1ZM6 8h8v1H6Zm0 3h8v1H6Z" />
-          </svg>
-
-          {/* Tooltip */}
-          <div className="absolute bottom-12 w-24 text-center text-sm text-white bg-gray-900 rounded-lg py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Register
-          </div>
-        </button>
+    <>
+      {/* Shimmer Button at the top of the page */}
+      <div className="fixed z-50 top-4 left-1/2 -translate-x-1/2">
+        <ShimmerButton className="shadow-2xl">
+          <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+            Register Now
+          </span>
+        </ShimmerButton>
       </div>
-    </div>
+
+      {/* Navbar at the bottom of the page */}
+      <div className="fixed z-50 w-full h-14 max-w-lg -translate-x-1/2 border border-gray-300 rounded-full bottom-4 left-1/2 bg-white shadow-md">
+        <div className="grid h-full max-w-lg grid-cols-4 mx-auto relative">
+          
+          {/* Home Button */}
+          <Link
+            to="/"
+            className="relative inline-flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-l-full group"
+          >
+            Home
+          </Link>
+
+          {/* Day 1 Button */}
+          <Link
+            to="/day1"
+            className="relative inline-flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 group"
+          >
+            Day 1
+          </Link>
+
+          {/* Day 2 Button */}
+          <Link
+            to="/day2"
+            className="relative inline-flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 group"
+          >
+            Day 2
+          </Link>
+
+          {/* Activities Button */}
+          <Link
+            to="/activities"
+            className="relative inline-flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-r-full group"
+          >
+            Activities
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 

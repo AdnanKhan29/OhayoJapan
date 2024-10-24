@@ -1,8 +1,8 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import { cn } from "./utils/utils";
 import React from "react";
+import { useEffect, useState } from "react";
+
+import { cn } from "./utils/utils";
 
 interface MeteorsProps {
   number?: number;

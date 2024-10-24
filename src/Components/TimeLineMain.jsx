@@ -3,12 +3,12 @@ import { Timeline } from "./timeline";
 import { TextGenerateEffect } from "./text-generator";
 
 export function TimelineDemo() {
-  const words1 = "Guests arrive and are welcomed by the University.";
-  const words2 = "Introduction by the Dean and key speakers.";
-  const words3 = "Students present their work, followed by a Q&A session.";
-  const words4 = "Time to network and build connections with other guests and students.";
-  const words5 = "A formal thank you speech to conclude the event and a look forward to future collaborations.";
-
+  const words1 = "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.";
+  const words2 = "The official inauguration ceremony of the event takes place. Key speakers or hosts introduce the event and its purpose.";
+  const words3 = "Interactive sessions or workshops begin for participants. Various activities designed to engage the audience are conducted.";
+  const words4 = "A break for lunch is provided to all attendees. Participants are encouraged to refresh and socialize during this time.";
+  const words5 = "Continuation of the workshops or activities from earlier sessions. Attendees participate in hands-on activities and group discussions.";
+  const words6 = "The event concludes with stage performances and prize distribution. Recognition is given to participants, followed by entertainment.";
   const data = [
     {
       title: "10:00 AM",
@@ -117,23 +117,10 @@ export function TimelineDemo() {
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
             ACTIVITIES & WORKSHOPS
           </h1>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
+
+          <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
+            <TextGenerateEffect words={words5} />
+          </p>
           <div className="grid grid-cols-2 gap-4">
             <img
               src="/assets/images/AC3.webp"
@@ -175,7 +162,7 @@ export function TimelineDemo() {
             STAGE ACTIVITIES
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words5} />
+            <TextGenerateEffect words={words6} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img

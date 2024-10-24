@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { HyperText } from './HyperText';
+import { WordFadeIn } from './WordFadeInProps';
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
@@ -43,10 +44,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         text="DAY 1"
         
         />
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm " >
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
+    <WordFadeIn words="An exciting start with cultural activities, workshops, and performances that set the tone for the event." />
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
