@@ -7,7 +7,7 @@ import Navbar from "./Components/Navbar";
 import Meteors from "./Components/Meteor";
 import Countdown from "./Components/Countdown"; // Import the Countdown component
 import { ShineBorder } from "./Components/ShineBorder";
-import { resources } from "./translations"; // Import translations
+import { resources } from "./translations"; // Import translatcoions
 
 export default function Home() {
   const { t } = useTranslation(); // Use the translation hook
@@ -309,9 +309,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-center h-screen">
-        {/* Add the countdown timer below the span */}
+      <h1 className="font-semibold text-center ">Timer</h1>
+      <section className="flex justify-center items-center ">
+      
+      
         <Countdown targetDate="2024-11-07T00:00:00" theme="dark" />
+        
       </section>
 
       <style jsx>{`

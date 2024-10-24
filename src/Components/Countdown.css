@@ -164,3 +164,49 @@ h2 {
     }
   }
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* Medium devices */
+  .countdown {
+    width: 600px;
+    .figure {
+      height: 90px;
+      width: 80px;
+      
+      > span {
+        font-size: 4.8em;
+        line-height: 90px;
+      }
+    }
+    .bloc-time {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Small devices */
+  .countdown {
+    width: 100%;
+    max-width: 480px;
+
+    .bloc-time {
+      margin-right: 15px;
+    }
+
+    .figure {
+      height: 70px;
+      width: 60px;
+
+      > span {
+        font-size: 3.6em;
+        line-height: 70px;
+      }
+    }
+
+    .count-title {
+      font-size: 0.85em;
+    }
+  }
+}
