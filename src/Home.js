@@ -1,8 +1,11 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "./Components/Navbar";
 import Meteors from "./Components/Meteor";
+import Countdown from "./Components/Countdown"; // Import the Countdown component
+import { ShineBorder } from "./Components/ShineBorder";
 
 export default function Home() {
   const [scrollX, setScrollX] = useState(0);
@@ -250,7 +253,7 @@ export default function Home() {
       <section
         style={{
           backgroundColor: "#ffffff", // Light background color
-          padding: "100px 20px",
+          padding: "50px 20px", // Reduce padding to decrease the gap
           textAlign: "center",
           color: "#000000", // Black text for contrast
         }}
@@ -267,7 +270,7 @@ export default function Home() {
             NOVEMBER
           </span>
           <span
-            className="date-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent mt-4"
+            className="date-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent mt-2" // Reduce margin to bring it closer
             style={{
               fontSize: "5vw", // Initial size for larger screens
               maxWidth: "100vw", // Ensure text doesn't overflow the viewport
@@ -284,7 +287,7 @@ export default function Home() {
               height: "2px",
               backgroundImage:
                 "linear-gradient(to right, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0))", // Faded ends
-              margin: "20px 0",
+              margin: "10px 0", // Reduce margin between elements
             }}
           ></div>
 
@@ -294,48 +297,19 @@ export default function Home() {
               fontSize: "18px", // Adjust font size as needed
               color: "#333333", // Darker text for information
               maxWidth: "600px", // Optional: limit the width for better readability
-              margin: "0 auto", // Center the paragraph
+              margin: "0 auto 20px", // Adjust margin-bottom to reduce space
             }}
           >
             Join us for an exciting event filled with insights, networking, and
             collaboration. Be part of the journey on the 7th and 8th of
             November, where innovation meets culture.
           </p>
-          
         </div>
+      </section>
 
-
-        <style jsx>{`
-          /* Responsive text for NOVEMBER */
-          .november-text {
-            font-size: 10vw;
-          }
-
-          /* Responsive text for 7TH AND 8TH */
-          .date-text {
-            font-size: 5vw;
-          }
-
-          /* Media queries to adjust text size for smaller screens */
-          @media (max-width: 768px) {
-            .november-text {
-              font-size: 12vw; /* Increase the size on small screens */
-            }
-            .date-text {
-              font-size: 6vw; /* Increase the size on small screens */
-            }
-          }
-
-          /* Media queries for extra-large screens */
-          @media (min-width: 1200px) {
-            .november-text {
-              font-size: 8vw; /* Slightly decrease the size for extra-large screens */
-            }
-            .date-text {
-              font-size: 4vw; /* Adjust the size for extra-large screens */
-            }
-          }
-        `}</style>
+      <section className="flex justify-center items-center h-screen">
+        {/* Add the countdown timer below the span */}
+        <Countdown targetDate="2024-11-07T00:00:00" theme="dark" />
       </section>
 
       <style jsx>{`

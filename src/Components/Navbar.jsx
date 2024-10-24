@@ -44,7 +44,7 @@ const Navbar = () => {
 
           {/* Activities Button */}
           <Link
-            to="/activities"
+            to="/activity"
             className="relative inline-flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-r-full group"
           >
             Activities
