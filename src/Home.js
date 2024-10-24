@@ -2,12 +2,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { useTranslation } from "react-i18next";
 import Navbar from "./Components/Navbar";
 import Meteors from "./Components/Meteor";
 import Countdown from "./Components/Countdown"; // Import the Countdown component
 import { ShineBorder } from "./Components/ShineBorder";
+import { resources } from "./translations"; // Import translations
 
 export default function Home() {
+  const { t } = useTranslation(); // Use the translation hook
+
   const [scrollX, setScrollX] = useState(0);
   const [startTyping, setStartTyping] = useState(false); // State to trigger typing animation
   const typingSectionRef = useRef(null); // Reference to the typing section
@@ -165,11 +169,11 @@ export default function Home() {
         {startTyping && (
           <TypeAnimation
             sequence={[
-              "In Collaboration With",
+              t("inCollaborationWith"),
               2000,
-              "In Collaboration With",
+              t("inCollaborationWith"),
               2000,
-              "In Collaboration With",
+              t("inCollaborationWith"),
               2000,
             ]}
             wrapper="h1"
@@ -204,14 +208,14 @@ export default function Home() {
                 fontWeight: "bold",
               }}
             >
-              JETAA
+              {t("jetaa")}
             </p>
           </div>
 
           <div style={{ textAlign: "center" }}>
             <img
               src="/assets/images/jal.png"
-              alt="Company 2"
+              alt="JAPAN AIRLINES"
               style={{
                 width: "150px",
                 height: "auto",
@@ -224,14 +228,14 @@ export default function Home() {
                 fontWeight: "bold",
               }}
             >
-              JAPAN AIRLINES
+              {t("jal")}
             </p>
           </div>
 
           <div style={{ textAlign: "center" }}>
             <img
               src="/assets/images/jetaain.png"
-              alt="JETAA"
+              alt="JETAA INDIA"
               style={{
                 width: "150px",
                 height: "auto",
@@ -244,7 +248,7 @@ export default function Home() {
                 fontWeight: "bold",
               }}
             >
-              JETAA INDIA
+              {t("jetaaIndia")}
             </p>
           </div>
         </div>
@@ -267,7 +271,7 @@ export default function Home() {
               maxWidth: "100vw", // Ensure text doesn't overflow the viewport
             }}
           >
-            NOVEMBER
+            {t("november")}
           </span>
           <span
             className="date-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent mt-2" // Reduce margin to bring it closer
@@ -276,7 +280,7 @@ export default function Home() {
               maxWidth: "100vw", // Ensure text doesn't overflow the viewport
             }}
           >
-            7TH AND 8TH
+            {t("date")}
           </span>
 
           {/* Responsive dividing line with faded ends */}
@@ -300,9 +304,7 @@ export default function Home() {
               margin: "0 auto 20px", // Adjust margin-bottom to reduce space
             }}
           >
-            Join us for an exciting event filled with insights, networking, and
-            collaboration. Be part of the journey on the 7th and 8th of
-            November, where innovation meets culture.
+            {t("eventInfo")}
           </p>
         </div>
       </section>
