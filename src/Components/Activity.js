@@ -63,6 +63,47 @@ export function Activity() {
     image: "/assets/images/IM6.webp",
   };
 
+  const Poster = {
+    title: "Poster Presentation",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+
+  const Chopstick = {
+    title: "Chopstick Skills",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+
+  const Calligraphy = {
+    title: "Calligraphy",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+
+  const Origami = {
+    title: "Origami",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+
+  const Table = {
+    title: "Table Game",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+  const Essay = {
+    title: "Essay Competition",
+    description:
+      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of Japanese language and culture.",
+    image: "/assets/images/IM6.webp",
+  };
+
   return (
     <div className="h-auto w-full flex items-center justify-center flex-col py-10 mt-24">
       <HyperText
@@ -79,7 +120,7 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{Yukata.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-green-400 via-blue-400 to-purple-500" />
             </div>
           </PinContainer>
         </div>
@@ -93,7 +134,7 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{Karaoke.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-yellow-300 via-red-400 to-pink-500" />
             </div>
           </PinContainer>
         </div>
@@ -107,7 +148,7 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{Folk.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-teal-400 via-purple-300 to-pink-400" />
             </div>
           </PinContainer>
         </div>
@@ -124,7 +165,7 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{JapaneseBD.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-indigo-500 via-purple-400 to-pink-300" />
             </div>
           </PinContainer>
         </div>
@@ -138,7 +179,7 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{JapaneseGD.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-green-300 via-yellow-400 to-orange-500" />
             </div>
           </PinContainer>
         </div>
@@ -152,11 +193,12 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{Judo.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-red-400 via-pink-500 to-yellow-500" />
             </div>
           </PinContainer>
         </div>
       </div>
+
       {/* Third row */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
         <div onClick={() => handleClick(Bhartanattyam)}>
@@ -170,7 +212,7 @@ export function Activity() {
                   {Bhartanattyam.description}
                 </span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-blue-400 via-green-300 to-teal-400" />
             </div>
           </PinContainer>
         </div>
@@ -184,7 +226,136 @@ export function Activity() {
               <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
                 <span className="text-slate-500">{Speech.description}</span>
               </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-purple-400 via-pink-300 to-red-400" />
+            </div>
+          </PinContainer>
+        </div>
+      </div>
+
+      {/* ---------------------------------  New Activities ------------------------------------------ */}
+      <HyperText
+        className="text-6xl font-bold text-black dark:text-white tracking-wider mt-20"
+        text="ACTIVITIES"
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+        <div onClick={() => handleClick(Poster)}>
+          <PinContainer title={Poster.title} href={Poster.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Poster.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Poster.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-green-400 via-blue-400 to-purple-500" />
+            </div>
+          </PinContainer>
+        </div>
+
+        <div onClick={() => handleClick(Chopstick)}>
+          <PinContainer title={Chopstick.title} href={Chopstick.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Chopstick.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Chopstick.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-yellow-300 via-red-400 to-pink-500" />
+            </div>
+          </PinContainer>
+        </div>
+
+        <div onClick={() => handleClick(Calligraphy)}>
+          <PinContainer title={Calligraphy.title} href={Calligraphy.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Calligraphy.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">
+                  {Calligraphy.description}
+                </span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-teal-400 via-purple-300 to-pink-400" />
+            </div>
+          </PinContainer>
+        </div>
+      </div>
+
+      {/* Second row */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+        <div onClick={() => handleClick(Origami)}>
+          <PinContainer title={Origami.title} href={Origami.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Origami.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Origami.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-indigo-500 via-purple-400 to-pink-300" />
+            </div>
+          </PinContainer>
+        </div>
+
+        <div onClick={() => handleClick(Table)}>
+          <PinContainer title={Table.title} href={Table.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Table.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Table.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-green-300 via-yellow-400 to-orange-500" />
+            </div>
+          </PinContainer>
+        </div>
+
+        <div onClick={() => handleClick(Essay)}>
+          <PinContainer title={Essay.title} href={Essay.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Essay.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Essay.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-red-400 via-pink-500 to-yellow-500" />
+            </div>
+          </PinContainer>
+        </div>
+      </div>
+
+      {/* Third row */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+        <div onClick={() => handleClick(Bhartanattyam)}>
+          <PinContainer title={Bhartanattyam.title} href={Bhartanattyam.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Bhartanattyam.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">
+                  {Bhartanattyam.description}
+                </span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-blue-400 via-green-300 to-teal-400" />
+            </div>
+          </PinContainer>
+        </div>
+
+        <div onClick={() => handleClick(Speech)}>
+          <PinContainer title={Speech.title} href={Speech.href}>
+            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                {Speech.title}
+              </h3>
+              <div className="text-base !m-0 !p-0 font-normal line-clamp-2">
+                <span className="text-slate-500">{Speech.description}</span>
+              </div>
+              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-purple-400 via-pink-300 to-red-400" />
             </div>
           </PinContainer>
         </div>
