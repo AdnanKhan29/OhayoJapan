@@ -301,7 +301,9 @@ export default function Home() {
             collaboration. Be part of the journey on the 7th and 8th of
             November, where innovation meets culture.
           </p>
+          
         </div>
+
 
         <style jsx>{`
           /* Responsive text for NOVEMBER */
