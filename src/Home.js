@@ -315,7 +315,7 @@ export default function Home() {
           maxWidth: "100vw", // Ensure text doesn't overflow the viewport
         }}
       >
-        COUNTDOWN TIMER
+        {t("countdownTimer")} {/* Use the translated text */}
       </h1>
       <section className="flex justify-center items-center ">
         <Countdown targetDate="2024-11-07T00:00:00" theme="dark" />
@@ -335,7 +335,7 @@ export default function Home() {
             maxWidth: "100vw", // Ensure text doesn't overflow the viewport
           }}
         >
-          {t("Faculty")}
+          {t("faculty")}
         </span>
 
         <div className="flex flex-wrap justify-center gap-8 mt-12">
@@ -346,7 +346,7 @@ export default function Home() {
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
               >
-                MOHAMMED SALMAN
+                {t("facultyCard1Name")} {/* Translated name */}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
@@ -363,7 +363,7 @@ export default function Home() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                Hover over this card to unleash the power of CSS perspective
+                {t("facultyCard1Desc")} {/* Translated description */}
               </CardItem>
             </CardBody>
           </CardContainer>
@@ -375,7 +375,7 @@ export default function Home() {
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
               >
-                RAGINI SHARMA
+                {t("facultyCard2Name")} {/* Translated name */}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
@@ -392,7 +392,7 @@ export default function Home() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                Experience the magic of hover effects
+                {t("facultyCard2Desc")}
               </CardItem>
             </CardBody>
           </CardContainer>
@@ -407,7 +407,7 @@ export default function Home() {
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
               >
-                IRFAN MOHAMMED
+                {t("facultyCard3Name")} {/* Translated name */}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
@@ -424,7 +424,7 @@ export default function Home() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                Learn how to make cards interactive with CSS
+                {t("facultyCard3Desc")}
               </CardItem>
             </CardBody>
           </CardContainer>
@@ -436,7 +436,7 @@ export default function Home() {
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
               >
-                ANAND RAJ
+                {t("facultyCard4Name")} {/* Translated name */}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
@@ -453,7 +453,7 @@ export default function Home() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                Expand your CSS knowledge with practical examples
+                {t("facultyCard4Desc")}
               </CardItem>
             </CardBody>
           </CardContainer>
@@ -482,7 +482,7 @@ export default function Home() {
             letterSpacing: "1px",
           }}
         >
-          Designed & Developed by Adnan and Jayaram
+          {t("footerTitle")}
         </p>
 
         {/* Container for Adnan and Jayaram */}
@@ -505,7 +505,7 @@ export default function Home() {
                 fontSize: "16px",
               }}
             >
-              Adnan
+              {t("footerNameAdnan")}
             </p>
             <div
               style={{
@@ -555,7 +555,7 @@ export default function Home() {
                 fontSize: "16px",
               }}
             >
-              Jayaram
+              {t("footerNameJayaram")}
             </p>
             <div
               style={{
@@ -604,7 +604,7 @@ export default function Home() {
             color: "#666",
           }}
         >
-          © {new Date().getFullYear()} All rights reserved.
+          {t("footerRights").replace("{year}", new Date().getFullYear())}
         </p>
       </footer>
 

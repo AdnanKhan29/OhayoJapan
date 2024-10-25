@@ -15,6 +15,27 @@ export const resources = {
       date: "7TH AND 8TH",
       eventInfo:
         "Join us for an exciting event filled with insights, networking, and collaboration. Be part of the journey on the 7th and 8th of November, where innovation meets culture.",
+      faculty: "Faculty", // Add translation key for Faculty
+      countdownTimer: "COUNTDOWN TIMER", // Add translation key for Countdown Timer
+      facultyCard1Name: "MOHAMMED SALMAN",
+      facultyCard1Desc:
+        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard2Name: "RAGINI SHARMA",
+      facultyCard2Desc:
+        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard3Name: "MOHAMMED IRFAN",
+      facultyCard3Desc:
+        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard4Name: "ANAND RAJ",
+      facultyCard4Desc:
+        "Hover over this card to unleash the power of CSS perspective",
+      footerTitle: "Designed & Developed by Adnan and Jayaram",
+      footerNameAdnan: "Adnan",
+      footerNameJayaram: "Jayaram",
+      footerRights: "© All rights reserved.",
+
+      //----------------------------------------------------------------------------------------------------------------
+
       arrivalTitle: "ARRIVAL OF GUESTS",
       arrivalDesc:
         "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.",
@@ -53,6 +74,23 @@ export const resources = {
       date: "7日と8日",
       eventInfo:
         "洞察、ネットワーキング、そしてコラボレーションに満ちたエキサイティングなイベントに参加してください。イノベーションと文化が交わる場所、11月7日と8日の旅にご参加ください。",
+      faculty: "教授陣", // Translation for Faculty
+      countdownTimer: "カウントダウンタイマー", // Translation for Countdown Timer
+      facultyCard1Name: "モハメッド・サルマン",
+      facultyCard1Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      facultyCard2Name: "ラジーニ・シャルマ",
+      facultyCard2Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      facultyCard3Name: "モハメド・イルファン",
+      facultyCard3Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      facultyCard4Name: "アナンド・ラージ",
+      facultyCard4Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      footerTitle: "アドナンとジャヤラムによって設計および開発されました",
+      footerNameAdnan: "アドナン",
+      footerNameJayaram: "ジャヤラム",
+      footerRights: "© 全著作権所有。",
+
+      //-----------------------------------------------------------------------------------------------------------
+
       arrivalTitle: "ゲストの到着",
       arrivalDesc:
         "ゲストが会場に到着し、イベントの準備が始まります。この期間中、出席者は歓迎され、席に案内されます。",
