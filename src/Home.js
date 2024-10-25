@@ -120,7 +120,7 @@ export default function Home() {
           }}
         >
           <motion.img
-            src="/assets/Images/logo.png"
+            src="/assets/images/logo.png"
             alt="Logo"
             style={{
               width: "60vw",
