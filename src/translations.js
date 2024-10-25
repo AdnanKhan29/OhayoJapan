@@ -35,7 +35,28 @@ export const resources = {
       footerRights: "© All rights reserved.",
 
       //----------------------------------------------------------------------------------------------------------------
-
+      Day1: "DAY 1",
+      timelineIntroduction:
+        "An exciting start with cultural activities, workshops, and performances that set the tone for the event.",
+      guestsArrivalTitle: "ARRIVAL OF GUESTS",
+      inauguralTitle: "INAUGURAL",
+      activitiesWorkshopsTitle: "ACTIVITIES & WORKSHOPS",
+      lunchTitle: "LUNCH FOR GUESTS",
+      afternoonWorkshopsTitle: "ACTIVITIES & WORKSHOPS",
+      stageActivitiesTitle: "STAGE ACTIVITIES",
+      guestsArrivalDesc:
+        "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.",
+      inauguralDesc:
+        "The official inauguration ceremony of the event takes place. Key speakers or hosts introduce the event and its purpose.",
+      activitiesDesc:
+        "Interactive sessions or workshops begin for participants. Various activities designed to engage the audience are conducted.",
+      lunchDesc:
+        "A break for lunch is provided to all attendees. Participants are encouraged to refresh and socialize during this time.",
+      afternoonWorkshopsDesc:
+        "Continuation of the workshops or activities from earlier sessions. Attendees participate in hands-on activities and group discussions.",
+      stageActivitiesDesc:
+        "The event concludes with stage performances and prize distribution. Recognition is given to participants, followed by entertainment.",
+      //-----
       arrivalTitle: "ARRIVAL OF GUESTS",
       arrivalDesc:
         "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.",
@@ -56,6 +77,30 @@ export const resources = {
         "The event concludes with stage performances and prize distribution. Recognition is given to participants, followed by entertainment.",
       eventStartDesc:
         "An exciting start with cultural activities, workshops, and performances that set the tone for the event.", // Fade-in text
+
+      //----------------------------------------------------------------------------------------------------------------
+
+      Day2: "DAY 2",
+      timelineIntroduction2:
+        "An exciting start with cultural activities, workshops, and performances that set the tone for the event.",
+      guestsArrivalDay2Title: "ARRIVAL OF GUESTS",
+      discussionForumTitle: "DISCUSSION FORUM",
+      lunchTitleDay2: "LUNCH FOR GUESTS",
+      afternoonWorkshopsTitleDay2: "ACTIVITIES & WORKSHOPS",
+      movieScreeningTitle: "MOVIE SCREENING",
+      conclusionTitle: "CONCLUSION & SEND OFF",
+      guestsArrivalDay2Desc:
+        "Guests arrive and are seated for the second day of the event. Attendees prepare for the discussions and activities ahead.",
+      discussionForumDesc:
+        "A brief discussion or introductory session is conducted. This may set the tone for the day's workshops or activities.",
+      lunchDescDay2:
+        "A one-hour lunch break is provided. Participants can relax and socialize during this break.",
+      afternoonWorkshopsDescDay2:
+        "Workshops or activities resume for further participation. Attendees engage in interactive sessions and group work.",
+      movieScreeningDesc:
+        "A movie related to the event theme is screened for attendees. Participants enjoy the cinematic experience together.",
+      conclusionDesc:
+        "The event is officially concluded with closing remarks. Final farewells and acknowledgments are made to the participants.",
     },
   },
   jp: {
@@ -90,27 +135,53 @@ export const resources = {
       footerRights: "© 全著作権所有。",
 
       //-----------------------------------------------------------------------------------------------------------
-
-      arrivalTitle: "ゲストの到着",
-      arrivalDesc:
-        "ゲストが会場に到着し、イベントの準備が始まります。この期間中、出席者は歓迎され、席に案内されます。",
+      Day1: "1日目",
+      timelineIntroduction:
+        "文化活動、ワークショップ、パフォーマンスでイベントの幕開けを飾ります。",
+      guestsArrivalTitle: "ゲストの到着",
       inauguralTitle: "開会式",
+      activitiesWorkshopsTitle: "活動とワークショップ",
+      lunchTitle: "昼食",
+      afternoonWorkshopsTitle: "午後の活動とワークショップ",
+      stageActivitiesTitle: "ステージ活動",
+      guestsArrivalDesc:
+        "ゲストが会場に到着し、イベントの準備が始まります。この期間中、参加者は歓迎され、席に案内されます。",
       inauguralDesc:
         "イベントの公式開会式が行われます。キースピーカーまたはホストがイベントとその目的を紹介します。",
-      workshopTitle1: "活動とワークショップ",
-      workshopDesc1:
-        "参加者のためのインタラクティブなセッションまたはワークショップが始まります。聴衆を引き込むために設計されたさまざまな活動が行われます。",
-      lunchTitle: "ゲストの昼食",
+      activitiesDesc:
+        "参加者のためのインタラクティブなセッションまたはワークショップが始まります。観客を引き込むために設計された様々な活動が行われます。",
       lunchDesc:
-        "すべての参加者に昼食の休憩が提供されます。参加者はこの時間にリフレッシュし、社交を楽しむことが奨励されます。",
-      workshopTitle2: "活動とワークショップ",
-      workshopDesc2:
-        "以前のセッションからのワークショップや活動の継続。参加者は実践的な活動やグループディスカッションに参加します。",
-      stageTitle: "ステージ活動",
-      stageDesc:
-        "イベントはステージパフォーマンスと賞の授与で終了します。参加者に対する認識が与えられ、続いてエンターテイメントが行われます。",
-      eventStartDesc:
-        "イベントの雰囲気を決める文化活動、ワークショップ、パフォーマンスでエキサイティングなスタートを切ります", // Fade-in text in Japanese
+        "参加者全員に昼食の時間が提供されます。参加者はこの時間にリフレッシュし、交流することが奨励されます。",
+      afternoonWorkshopsDesc:
+        "午前のセッションの続きとして、ワークショップやアクティビティが再開されます。参加者はハンズオン活動やグループディスカッションに参加します。",
+      stageActivitiesDesc:
+        "イベントはステージでのパフォーマンスと賞の授与で締めくくられます。参加者への感謝と共にエンターテインメントが提供されます。",
+
+      //----------------------------------------------------------------------------------------------------------------
+
+      Day2: "2日目",
+      timelineIntroduction:
+        "イベントの雰囲気を決める文化活動、ワークショップ、パフォーマンスでエキサイティングなスタートを切ります。",
+      guestsArrivalDay2Title: "ゲストの到着",
+      discussionForumTitle: "ディスカッションフォーラム",
+      lunchTitleDay2: "ゲストの昼食",
+      afternoonWorkshopsTitleDay2: "活動とワークショップ",
+      movieScreeningTitle: "映画上映",
+      conclusionTitle: "終了＆送別",
+
+      // Descriptions for Day 2 Events in Japanese
+      guestsArrivalDay2Desc:
+        "ゲストが到着し、イベント2日目のために着席します。参加者はこれから始まるディスカッションと活動の準備をします。",
+      discussionForumDesc:
+        "短いディスカッションやイントロダクションセッションが行われます。これにより、その日のワークショップや活動のトーンが設定されます。",
+      lunchDescDay2:
+        "1時間の昼食休憩が提供されます。参加者はこの休憩中にリラックスして交流することができます。",
+      afternoonWorkshopsDescDay2:
+        "ワークショップやアクティビティが再開され、参加者はインタラクティブなセッションやグループ作業に参加します。",
+      movieScreeningDesc:
+        "イベントのテーマに関連する映画が上映されます。参加者は一緒に映画を楽しみます。",
+      conclusionDesc:
+        "イベントは公式に終了し、閉会の言葉で締めくくられます。最終的な別れと参加者への感謝が述べられます。",
     },
   },
 };

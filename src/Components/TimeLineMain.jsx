@@ -1,24 +1,19 @@
 import React from "react";
 import { Timeline } from "./timeline";
 import { TextGenerateEffect } from "./text-generator";
-
+import { useTranslation } from "react-i18next";
 export function TimelineDemo() {
-  const words1 = "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.";
-  const words2 = "The official inauguration ceremony of the event takes place. Key speakers or hosts introduce the event and its purpose.";
-  const words3 = "Interactive sessions or workshops begin for participants. Various activities designed to engage the audience are conducted.";
-  const words4 = "A break for lunch is provided to all attendees. Participants are encouraged to refresh and socialize during this time.";
-  const words5 = "Continuation of the workshops or activities from earlier sessions. Attendees participate in hands-on activities and group discussions.";
-  const words6 = "The event concludes with stage performances and prize distribution. Recognition is given to participants, followed by entertainment.";
+  const { t } = useTranslation();
   const data = [
     {
       title: "10:00 AM",
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            ARRIVAL OF GUESTS
+          {t("guestsArrivalTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words1} />
+            <TextGenerateEffect words={t("guestsArrivalDesc")} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
@@ -40,10 +35,10 @@ export function TimelineDemo() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            INAUGURAL
+          {t("inauguralTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words2} />
+            <TextGenerateEffect words={t("inauguralDesc")} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
@@ -65,10 +60,10 @@ export function TimelineDemo() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            ACTIVITIES & WORKSHOPS
+          {t("activitiesWorkshopsTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words3} />
+            <TextGenerateEffect words={t("activitiesDesc")} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
@@ -90,10 +85,10 @@ export function TimelineDemo() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            LUNCH FOR GUESTS
+          {t("lunchTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words4} />
+            <TextGenerateEffect words={t("lunchDesc")}/>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
@@ -115,11 +110,11 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            ACTIVITIES & WORKSHOPS
+            {t("afternoonWorkshopsTitle")}
           </h1>
 
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words5} />
+            <TextGenerateEffect words={t("afternoonWorkshopsDesc")} />
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -159,10 +154,10 @@ export function TimelineDemo() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-            STAGE ACTIVITIES
+          {t("stageActivitiesTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={words6} />
+            <TextGenerateEffect words={t("stageActivitiesDesc")} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img

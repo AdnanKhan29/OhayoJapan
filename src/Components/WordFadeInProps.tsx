@@ -24,6 +24,7 @@ export function WordFadeIn({
   },
   className,
 }: WordFadeInProps) {
+  console.log("words passed to WordFadeIn: ", words); // Debugging: Check the input
   const _words = words.split(" ");
 
   return (
@@ -37,7 +38,7 @@ export function WordFadeIn({
       )}
     >
       {_words.map((word, i) => (
-        <motion.span key={word} variants={variants} custom={i}>
+        <motion.span key={`${word}-${i}`} variants={variants} custom={i}>
           {word}{" "}
         </motion.span>
       ))}
