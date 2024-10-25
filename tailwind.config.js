@@ -9,10 +9,12 @@ module.exports = {
       animation: {
         meteor: "meteor 5s linear infinite",
         "shimmer-slide":
-        "shimmer-slide var(--speed) ease-in-out infinite alternate",
-      "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+          "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        shine: "shine var(--duration) infinite linear",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
-     
+
       keyframes: {
         "spin-around": {
           "0%": {
@@ -39,6 +41,22 @@ module.exports = {
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: 0,
+          },
+        },
+        shine: {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
           },
         },
       },

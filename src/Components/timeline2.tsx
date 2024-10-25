@@ -8,6 +8,8 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { HyperText } from './HyperText';
 import { WordFadeIn } from './WordFadeInProps';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
@@ -15,9 +17,20 @@ interface TimelineEntry {
 
 
 export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const [isInitialized, setIsInitialized] = useState(i18next.isInitialized);
+
+  useEffect(() => {
+    // Check if i18next is initialized and set up an event listener
+    if (!i18next.isInitialized) {
+      i18next.on('initialized', () => setIsInitialized(true));
+    } else {
+      setIsInitialized(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (ref.current) {
@@ -34,6 +47,8 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  if (!isInitialized) return null; // Render nothing until i18next is initialized
+
   return (
     <div
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
@@ -41,12 +56,11 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <HyperText
-        className="text-6xl font-bold text-black dark:text-white"
-        text="DAY 2"
-        
+          className="text-6xl font-bold text-black dark:text-white"
+          text={t("Day2")} // Translated text for "DAY 1"
         />
         
-        <WordFadeIn words="A day filled with insightful discussions and interactive activities, concluding with a captivating movie screening." />
+        <WordFadeIn words={t("timelineIntroduction")} />
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
