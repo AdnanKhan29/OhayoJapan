@@ -25,7 +25,7 @@ h1 {
   
   strong {
     font-weight: 400;
-    color: #ea4c4c;
+    color: #000000;
   }  
 }
 
@@ -83,7 +83,7 @@ h2 {
       margin: auto;
       font: normal 5.94em/107px 'Lato';
       font-weight: 700;
-      color: #de4848;
+      color: #000000;
     }
 
     .top, .bottom-back {    

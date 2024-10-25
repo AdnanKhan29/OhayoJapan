@@ -3,11 +3,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
-import Navbar from "./Components/Navbar";
 import Meteors from "./Components/Meteor";
 import Countdown from "./Components/Countdown"; // Import the Countdown component
-import { ShineBorder } from "./Components/ShineBorder";
-import { resources } from "./translations"; // Import translatcoions
+import { CardBody, CardContainer, CardItem } from "./Components/3d-card";
+import { FaLinkedin, FaGlobe } from "react-icons/fa";
 
 export default function Home() {
   const { t } = useTranslation(); // Use the translation hook
@@ -309,13 +308,305 @@ export default function Home() {
         </div>
       </section>
 
-      <h1 className="font-semibold text-center ">Timer</h1>
+      <h1
+        className="november-text font-semibold text-center "
+        style={{
+          fontSize: "6vw", // Initial size for larger screens
+          maxWidth: "100vw", // Ensure text doesn't overflow the viewport
+        }}
+      >
+        COUNTDOWN TIMER
+      </h1>
       <section className="flex justify-center items-center ">
-      
-      
         <Countdown targetDate="2024-11-07T00:00:00" theme="dark" />
-        
       </section>
+
+      <section
+        style={{
+          backgroundColor: "#f5f5f5", // Light grey background for contrast
+          padding: "50px 20px", // Add some padding for spacing
+          textAlign: "center",
+        }}
+      >
+        <span
+          className="november-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent"
+          style={{
+            fontSize: "6vw", // Initial size for larger screens
+            maxWidth: "100vw", // Ensure text doesn't overflow the viewport
+          }}
+        >
+          {t("Faculty")}
+        </span>
+
+        <div className="flex flex-wrap justify-center gap-8 mt-12">
+          {/* Row 1 - Card 1 */}
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 text-center relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                MOHAMMED SALMAN
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  height="1000"
+                  width="1000"
+                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Hover over this card to unleash the power of CSS perspective
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+
+          {/* Row 1 - Card 2 */}
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 text-center relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                RAGINI SHARMA
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  height="1000"
+                  width="1000"
+                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Experience the magic of hover effects
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+        </div>
+
+        {/* Row 2 */}
+        <div className="flex flex-wrap justify-center gap-8 mt-3">
+          {/* Row 2 - Card 1 */}
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 text-center relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                IRFAN MOHAMMED
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80"
+                  height="1000"
+                  width="1000"
+                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Learn how to make cards interactive with CSS
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+
+          {/* Row 2 - Card 2 */}
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 text-center relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                ANAND RAJ
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80"
+                  height="1000"
+                  width="1000"
+                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Expand your CSS knowledge with practical examples
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+        </div>
+      </section>
+      <footer
+        style={{
+          backgroundColor: "#f9f9f9", // Light background for modern look
+          padding: "40px 20px",
+          textAlign: "center",
+          color: "#333",
+          fontSize: "16px",
+          paddingBottom: "40px",
+          borderTop: "2px solid #ddd",
+          boxShadow: "0px -5px 10px rgba(0, 0, 0, 0.05)", // Soft shadow to lift the footer
+        }}
+      >
+        {/* Title */}
+        <p
+          style={{
+            margin: "0 0 20px 0",
+            fontWeight: "600",
+            fontSize: "18px",
+            color: "#333",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+          }}
+        >
+          Designed & Developed by Adnan and Jayaram
+        </p>
+
+        {/* Container for Adnan and Jayaram */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "60px", // Spacing between the two profiles
+            marginTop: "20px",
+          }}
+        >
+          {/* Adnan's Info */}
+          <div style={{ textAlign: "center" }}>
+            <p
+              style={{
+                margin: "0",
+                fontWeight: "600",
+                color: "#333",
+                fontSize: "16px",
+              }}
+            >
+              Adnan
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "15px", // Spacing between icons
+                marginTop: "10px",
+              }}
+            >
+              <a
+                href="https://www.linkedin.com/in/adnan-khan-547713246/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#0072b1",
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                <FaLinkedin size={28} />
+              </a>
+              <a
+                href="https://uiuxadnan.framer.website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#333",
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                <FaGlobe size={28} />
+              </a>
+            </div>
+          </div>
+
+          {/* Jayaram's Info */}
+          <div style={{ textAlign: "center" }}>
+            <p
+              style={{
+                margin: "0",
+                fontWeight: "600",
+                color: "#333",
+                fontSize: "16px",
+              }}
+            >
+              Jayaram
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "15px",
+                marginTop: "10px",
+              }}
+            >
+              <a
+                href="https://www.linkedin.com/in/jaya-ram-samavedam-714108249/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#0072b1",
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                <FaLinkedin size={28} />
+              </a>
+              <a
+                href="https://jayaramsamavedam.live/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#333",
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                <FaGlobe size={28} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Simple copyright text */}
+        <p
+          style={{
+            marginTop: "40px",
+            fontSize: "14px",
+            color: "#666",
+          }}
+        >
+          © {new Date().getFullYear()} All rights reserved.
+        </p>
+      </footer>
 
       <style jsx>{`
         .falling-petals-container {

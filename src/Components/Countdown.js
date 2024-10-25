@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { TweenMax, Quart } from "gsap";
 import { ShineBorder } from "./ShineBorder"; // Import the ShineBorder component
 
-
 const Countdown = ({ targetDate }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
@@ -87,281 +86,279 @@ const Countdown = ({ targetDate }) => {
     checkAndAnimate(timeLeft.seconds, $seconds1, $seconds2);
   }, [timeLeft]);
 
-  return (<>
+  return (
+    <>
+      <div className="relative flex h-[500px] w-[800px] flex-col items-center justify-center overflow-hidden rounded-lg  bg-inherit">
+        <div className="wrap">
+          <div className="countdown">
+            <div className="bloc-time hours" data-init-value="24">
+              <span className="count-title">Hours</span>
+              <div className="figure hours hours-1">
+                <span className="top">2</span>
+                <span className="top-back">
+                  <span>2</span>
+                </span>
+                <span className="bottom">2</span>
+                <span className="bottom-back">
+                  <span>2</span>
+                </span>
+              </div>
+              <div className="figure hours hours-2">
+                <span className="top">4</span>
+                <span className="top-back">
+                  <span>4</span>
+                </span>
+                <span className="bottom">4</span>
+                <span className="bottom-back">
+                  <span>4</span>
+                </span>
+              </div>
+            </div>
 
-    <div
-      className="relative flex h-[500px] w-[800px] flex-col items-center justify-center overflow-hidden rounded-lg  bg-inherit">
-      <div className="wrap">
-        <div className="countdown">
-          <div className="bloc-time hours" data-init-value="24">
-            <span className="count-title">Hours</span>
-            <div className="figure hours hours-1">
-              <span className="top">2</span>
-              <span className="top-back">
-                <span>2</span>
-              </span>
-              <span className="bottom">2</span>
-              <span className="bottom-back">
-                <span>2</span>
-              </span>
+            <div className="bloc-time min" data-init-value="0">
+              <span className="count-title">Minutes</span>
+              <div className="figure min min-1">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+              <div className="figure min min-2">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
             </div>
-            <div className="figure hours hours-2">
-              <span className="top">4</span>
-              <span className="top-back">
-                <span>4</span>
-              </span>
-              <span className="bottom">4</span>
-              <span className="bottom-back">
-                <span>4</span>
-              </span>
-            </div>
-          </div>
 
-          <div className="bloc-time min" data-init-value="0">
-            <span className="count-title">Minutes</span>
-            <div className="figure min min-1">
-              <span className="top">0</span>
-              <span className="top-back">
-                <span>0</span>
-              </span>
-              <span className="bottom">0</span>
-              <span className="bottom-back">
-                <span>0</span>
-              </span>
-            </div>
-            <div className="figure min min-2">
-              <span className="top">0</span>
-              <span className="top-back">
-                <span>0</span>
-              </span>
-              <span className="bottom">0</span>
-              <span className="bottom-back">
-                <span>0</span>
-              </span>
-            </div>
-          </div>
-
-          <div className="bloc-time sec" data-init-value="0">
-            <span className="count-title">Seconds</span>
-            <div className="figure sec sec-1">
-              <span className="top">0</span>
-              <span className="top-back">
-                <span>0</span>
-              </span>
-              <span className="bottom">0</span>
-              <span className="bottom-back">
-                <span>0</span>
-              </span>
-            </div>
-            <div className="figure sec sec-2">
-              <span className="top">0</span>
-              <span className="top-back">
-                <span>0</span>
-              </span>
-              <span className="bottom">0</span>
-              <span className="bottom-back">
-                <span>0</span>
-              </span>
+            <div className="bloc-time sec" data-init-value="0">
+              <span className="count-title">Seconds</span>
+              <div className="figure sec sec-1">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+              <div className="figure sec sec-2">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <style jsx>{`
-    body {
-  background-color: #f2f1ed;
-}
+      <style jsx>{`
+        body {
+          background-color: #f2f1ed;
+        }
 
-.wrap {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 310px;
-}
+        .wrap {
+          position: absolute;
+          bottom: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 310px;
+        }
 
-a {
-  text-decoration: none;
-  color: #1a1a1a;
-}
+        a {
+          text-decoration: none;
+          color: #1a1a1a;
+        }
 
+        .countdown {
+          width: 720px;
+          margin: 0 auto;
 
+          .bloc-time {
+            float: left;
+            margin-right: 45px;
+            text-align: center;
 
-.countdown {
-  width: 720px;
-  margin: 0 auto;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
 
-  .bloc-time {
-    float: left;    
-    margin-right: 45px;    
-    text-align: center;    
+          .count-title {
+            display: block;
+            margin-bottom: 15px;
+            font: normal 0.94em "Lato";
+            color: #1a1a1a;
+            text-transform: uppercase;
+          }
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+          .figure {
+            position: relative;
+            float: left;
+            height: 110px;
+            width: 100px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2),
+              inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
 
-  .count-title {
-    display: block;
-    margin-bottom: 15px;
-    font: normal 0.94em 'Lato';
-    color: #1a1a1a;
-    text-transform: uppercase;
-  }
+            &:last-child {
+              margin-right: 0;
+            }
 
-  .figure {
-    position: relative;
-    float: left;
-    height: 110px;
-    width: 100px;
-    margin-right: 10px;
-    background-color: #fff;
-    border-radius: 8px; 
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2), inset 2px 4px 0 0 rgba(255, 255, 255, .08);
+            > span {
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: auto;
+              font: normal 5.94em/107px "Lato";
+              font-weight: 700;
+              color: #de4848;
+            }
 
-    &:last-child {
-      margin-right: 0;
-    }
-  
-    > span {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
-      font: normal 5.94em/107px 'Lato';
-      font-weight: 700;
-      color: #de4848;
-    }
+            .top,
+            .bottom-back {
+              &:after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              }
+            }
 
-    .top, .bottom-back {    
-      &:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
-      }
-    }
+            .top {
+              z-index: 3;
+              background-color: #f7f7f7;
+              transform-origin: 50% 100%;
+              transform: perspective(200px);
+            }
 
-    .top {
-      z-index: 3;
-      background-color: #f7f7f7;
-      transform-origin: 50% 100%;
-      transform: perspective(200px);
-    }
+            .bottom {
+              z-index: 1;
 
-    .bottom {  
-      z-index: 1;
-      
-      &:before {
-        content: "";
-        position: absolute;
-        display: block; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background-color: rgba(0, 0, 0, .02);
-      }
-    }
+              &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                background-color: rgba(0, 0, 0, 0.02);
+              }
+            }
 
-    .bottom-back {
-      z-index: 2;
-      top: 0;
-      height: 50%;
-      overflow: hidden;    
-      background-color: #f7f7f7;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+            .bottom-back {
+              z-index: 2;
+              top: 0;
+              height: 50%;
+              overflow: hidden;
+              background-color: #f7f7f7;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
 
-      span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
+              span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+              }
+            }
 
-    .top, .top-back {
-      height: 50%;
-      overflow: hidden;
-      backface-visibility: hidden;
-    }
+            .top,
+            .top-back {
+              height: 50%;
+              overflow: hidden;
+              backface-visibility: hidden;
+            }
 
-    .top-back {
-      z-index: 4;
-      bottom: 0;
-      background-color: #fff;
-      transform-origin: 50% 0;
-      transform: perspective(200px) rotateX(180deg);
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+            .top-back {
+              z-index: 4;
+              bottom: 0;
+              background-color: #fff;
+              transform-origin: 50% 0;
+              transform: perspective(200px) rotateX(180deg);
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
 
-      span {
-        position: absolute;
-        top: -100%;
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
-  }
-}
+              span {
+                position: absolute;
+                top: -100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+              }
+            }
+          }
+        }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  /* Medium devices */
-  .countdown {
-    width: 600px;
-    .figure {
-      height: 90px;
-      width: 80px;
-      
-      > span {
-        font-size: 4.8em;
-        line-height: 90px;
-      }
-    }
-    .bloc-time {
-      margin-right: 30px;
-    }
-  }
-}
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+          /* Medium devices */
+          .countdown {
+            width: 600px;
+            .figure {
+              height: 90px;
+              width: 80px;
 
-@media (max-width: 768px) {
-  /* Small devices */
-  .countdown {
-    width: 100%;
-    max-width: 480px;
+              > span {
+                font-size: 4.8em;
+                line-height: 90px;
+              }
+            }
+            .bloc-time {
+              margin-right: 30px;
+            }
+          }
+        }
 
-    .bloc-time {
-      margin-right: 15px;
-    }
+        @media (max-width: 768px) {
+          /* Small devices */
+          .countdown {
+            width: 100%;
+            max-width: 480px;
 
-    .figure {
-      height: 70px;
-      width: 60px;
+            .bloc-time {
+              margin-right: 15px;
+            }
 
-      > span {
-        font-size: 3.6em;
-        line-height: 70px;
-      }
-    }
+            .figure {
+              height: 70px;
+              width: 60px;
 
-    .count-title {
-      font-size: 0.85em;
-    }
-  }
-}
+              > span {
+                font-size: 3.6em;
+                line-height: 70px;
+              }
+            }
 
-    `
-      }</style>
+            .count-title {
+              font-size: 0.85em;
+            }
+          }
+        }
+      `}</style>
     </>
   );
 };

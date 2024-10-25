@@ -2,7 +2,7 @@ export const resources = {
   en: {
     translation: {
       home: "Home",
-      day1: "DAY 1", // Title for Day 1
+      day1: "Day 1", // Title for Day 1
       day2: "Day 2",
       activities: "Activities",
       register: "Register Now",
