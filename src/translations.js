@@ -69,7 +69,7 @@ export const resources = {
       inCollaborationWith: "共同開催",
       jetaa: "JETAA",
       jal: "日本航空",
-      jetaaIndia: "JETAAインド",
+      jetaaIndia: "JETAA インド",
       november: "11月",
       date: "7日と8日",
       eventInfo:

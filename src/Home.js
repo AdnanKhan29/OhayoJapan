@@ -164,24 +164,15 @@ export default function Home() {
           color: "#000000", // Black text for light theme
         }}
       >
-        {/* Typing animation only starts when the section is in view */}
         {startTyping && (
           <TypeAnimation
-            sequence={[
-              t("inCollaborationWith"),
-              2000,
-              t("inCollaborationWith"),
-              2000,
-              t("inCollaborationWith"),
-              2000,
-            ]}
+            sequence={[t("inCollaborationWith"), 2000]}
             wrapper="h1"
             speed={50}
             className="text-4xl font-bold text-center sm:text-5xl md:text-5xl lg:text-5xl pb-12"
             repeat={Infinity}
           />
         )}
-
         <div
           style={{
             display: "flex",
@@ -350,7 +341,7 @@ export default function Home() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/assets/images/F1.jpeg"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -411,7 +402,7 @@ export default function Home() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80"
+                  src="/assets/images/F3.png"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -440,7 +431,7 @@ export default function Home() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80"
+                  src="/assets/images/F4.png"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
