@@ -13,7 +13,9 @@ export default function Home() {
 
   const [scrollX, setScrollX] = useState(0);
   const [startTyping, setStartTyping] = useState(false); // State to trigger typing animation
+  const [showPetals, setShowPetals] = useState(true); // State to control petal visibility
   const typingSectionRef = useRef(null); // Reference to the typing section
+  const movingImagesRef = useRef(null); // Reference to the moving images section
 
   const generateRandomPetals = (numPetals) => {
     const petals = [];
@@ -82,7 +84,22 @@ export default function Home() {
         const triggerPoint = window.innerHeight / 2;
 
         if (sectionTop < triggerPoint) {
-          setStartTyping(true); // Start typing when section is in view
+          setStartTyping(true);
+        }
+      }
+
+      // Check if the moving images section is in view
+      const movingImagesSection = movingImagesRef.current;
+      if (movingImagesSection) {
+        const movingSectionTop =
+          movingImagesSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight;
+
+        // Hide petals when the moving images section is in view
+        if (movingSectionTop < triggerPoint) {
+          setShowPetals(false);
+        } else {
+          setShowPetals(true);
         }
       }
     };
@@ -106,9 +123,12 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        <div className="falling-petals-container">
-          {generateRandomPetals(25)}
-        </div>
+        {/* Render petals only if showPetals is true */}
+        {showPetals && (
+          <div className="falling-petals-container">
+            {generateRandomPetals(25)}
+          </div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -132,6 +152,7 @@ export default function Home() {
       </section>
 
       <section
+        ref={movingImagesRef} // Attach ref to detect scroll for moving images
         style={{
           backgroundColor: "#f0f0f0", // Light background
           height: "600px",

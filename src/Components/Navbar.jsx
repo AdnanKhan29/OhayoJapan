@@ -38,7 +38,8 @@ const Navbar = () => {
             to="/day1"
             className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 transition-colors duration-300 ease-in-out"
           >
-            {t("day1")}
+            <span className="lg:hidden">{t("d1")}</span> {/* "D-1" on small screens */}
+            <span className="hidden lg:inline">{t("day1")}</span> {/* "Day 1" on large screens */}
           </Link>
 
           {/* Day 2 Button */}
@@ -46,7 +47,8 @@ const Navbar = () => {
             to="/day2"
             className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 transition-colors duration-300 ease-in-out"
           >
-            {t("day2")}
+            <span className="lg:hidden">{t("d2")}</span> {/* "D-2" on small screens */}
+            <span className="hidden lg:inline">{t("day2")}</span> {/* "Day 2" on large screens */}
           </Link>
 
           {/* Activities Button */}
@@ -57,17 +59,21 @@ const Navbar = () => {
             {t("activities")}
           </Link>
 
-          {/* Japanese Button */}
+          {/* Language Toggle Button */}
           <button
             onClick={handleLanguageChange}
             className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-r-full transition-colors duration-300 ease-in-out"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/197/197604.png"
-              alt={t("japanese")}
+              src={
+                i18n.language === "en"
+                  ? "https://cdn-icons-png.flaticon.com/512/197/197604.png"
+                  : "https://cdn-icons-png.flaticon.com/512/197/197374.png"
+              }
+              alt={i18n.language === "en" ? t("japanese") : t("english")}
               className="w-6 h-6 mr-2"
             />
-            {t("japanese")}
+            {i18n.language === "en" ? t("japanese") : t("english")}
           </button>
         </div>
       </div>

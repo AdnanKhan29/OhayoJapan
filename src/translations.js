@@ -4,9 +4,12 @@ export const resources = {
       home: "Home",
       day1: "Day 1", // Title for Day 1
       day2: "Day 2",
+      d1: "D-1",
+      d2: "D-2",
       activities: "Activities",
       register: "Register Now",
       japanese: "Japanese",
+      english: "English",
       inCollaborationWith: "In Collaboration With",
       jetaa: "JETAA",
       clair: "CLAIR",
@@ -43,8 +46,8 @@ export const resources = {
       inauguralTitle: "INAUGURAL",
       activitiesWorkshopsTitle: "ACTIVITIES & WORKSHOPS",
       lunchTitle: "LUNCH FOR GUESTS",
-      afternoonWorkshopsTitle: "ACTIVITIES & WORKSHOPS",
-      stageActivitiesTitle: "STAGE ACTIVITIES",
+      afternoonWorkshopsTitle: "STAGE ACTIVITIES",
+      stageActivitiesTitle: "GUESTS RETURN",
       guestsArrivalDesc:
         "Guests arrive at the venue, and preparations for the event begin. Attendees are welcomed and seated during this period.",
       inauguralDesc:
@@ -54,7 +57,7 @@ export const resources = {
       lunchDesc:
         "A break for lunch is provided to all attendees. Participants are encouraged to refresh and socialize during this time.",
       afternoonWorkshopsDesc:
-        "Continuation of the workshops or activities from earlier sessions. Attendees participate in hands-on activities and group discussions.",
+        "Continuation of stage performances and prize distribution. Recognition is given to participants, followed by entertainment.",
       stageActivitiesDesc:
         "The event concludes with stage performances and prize distribution. Recognition is given to participants, followed by entertainment.",
       //-----
@@ -155,9 +158,12 @@ export const resources = {
       home: "ホーム",
       day1: "1日目", // Title for Day 1 in Japanese
       day2: "2日目",
+      d1: "1日目",
+      d2: "2日目",
       activities: "活動",
       register: "今すぐ登録",
       japanese: "英語",
+      english: "English",
       inCollaborationWith: "共同開催",
       jetaa: "JETAA",
       clair: "CLAIR",

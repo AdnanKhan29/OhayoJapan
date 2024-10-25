@@ -56,7 +56,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "11:00 AM TO 1:00 PM",
+      title: "11:00 AM TO 1:30 PM",
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
@@ -81,7 +81,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "1:00 PM TO 1:30 PM",
+      title: "1:30 PM TO 2:00 PM",
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
@@ -106,7 +106,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "1:30 PM TO 3:30PM",
+      title: "2:00 PM TO 5:30PM",
       content: (
         <div>
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
@@ -150,7 +150,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "3:30 PM to 5:30 PM",
+      title: "5:30 PM",
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
