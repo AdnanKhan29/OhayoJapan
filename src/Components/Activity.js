@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { PinContainer } from "./PinContainer";
 import { HyperText } from "./HyperText";
+import { useTranslation } from "react-i18next";
 export function Activity() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleClick = (pin) => {
@@ -9,9 +11,8 @@ export function Activity() {
   };
 
   const Yukata = {
-    title: "Yukata Fashion Walk",
-    description:
-      " A Yukata Fashion Walk is a cultural and fashion event where participants wear yukatas—a traditional, casual Japanese garment—and perform a ramp walk, similar to a fashion show. ",
+    title: t("yukataTitle"),
+    description: t("yukataDesc"),
     image: "/assets/images/IM1.webp", // Placeholder image URL
   };
 
@@ -112,7 +113,7 @@ export function Activity() {
       />
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
         <div onClick={() => handleClick(Yukata)}>
-          <PinContainer title={Yukata.title} href={Yukata.href}>
+          <PinContainer title={Yukata.title}>
             <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
                 {Yukata.title}

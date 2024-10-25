@@ -201,6 +201,25 @@ export default function Home() {
               {t("jetaa")}
             </p>
           </div>
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/assets/images/C.gif"
+              alt="CLAIR"
+              style={{
+                width: "150px",
+                height: "auto",
+              }}
+            />
+            <p
+              style={{
+                marginTop: "10px",
+                fontSize: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              {t("clair")}
+            </p>
+          </div>
 
           <div style={{ textAlign: "center" }}>
             <img
@@ -370,7 +389,7 @@ export default function Home() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/assets/images/F2.jpeg"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -402,7 +421,7 @@ export default function Home() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="/assets/images/F3.png"
+                  src="/assets/images/F3.jpeg"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -613,8 +632,8 @@ export default function Home() {
         .falling-petal {
           position: absolute;
           top: -10%;
-          width: 3vw;
-          height: 3vw;
+          width: 1.5vw;
+          height: 1.5vw;
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
