@@ -7,13 +7,12 @@ import { TimelineDemo } from "./Components/TimeLineMain";
 import AudioPlayer from "./Components/AudioPlayer"; // Import the audio player
 import { Activity } from "./Components/Activity";
 import { ProjectDetails } from "./Components/ProjectDetails";
+import ScrollToTop from "./Components/ScrollToTop";
 export default function App() {
   return (
     <>
-      {/* AudioPlayer will persist across all routes */}
+      <ScrollToTop></ScrollToTop>
       <AudioPlayer />
-
-      {/* Navigation routes */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/day1" element={<TimelineDemo />} />

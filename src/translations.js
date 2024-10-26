@@ -21,6 +21,9 @@ export const resources = {
         "Join us for an exciting event filled with insights, networking, and collaboration. Be part of the journey on the 7th and 8th of November, where innovation meets culture.",
       faculty: "Faculty", // Add translation key for Faculty
       countdownTimer: "COUNTDOWN TIMER", // Add translation key for Countdown Timer
+      deanInternationalRelations: "DEAN INTERNATIONAL RELATION",
+      deanCardName: "Dr KISHOR BABU",
+      deanCardDesc: "Dean International Relations & MHS",
       facultyCard1Name: "MD SALMAN",
       facultyCard1Desc: "Japanese Faculty",
       facultyCard2Name: "RAGINI SHARMA",
@@ -161,6 +164,10 @@ export const resources = {
       japanese: "英語",
       english: "English",
       inCollaborationWith: "共同開催",
+      deanInternationalRelations: "国際関係学部長",
+      deanCardName: "キショール・バブ博士",
+      deanCardDesc: "国際関係およびMHS学部長",
+
       jetaa: "JETAA",
       clair: "CLAIR",
       jal: "日本航空",
