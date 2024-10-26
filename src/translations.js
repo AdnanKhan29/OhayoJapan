@@ -21,18 +21,14 @@ export const resources = {
         "Join us for an exciting event filled with insights, networking, and collaboration. Be part of the journey on the 7th and 8th of November, where innovation meets culture.",
       faculty: "Faculty", // Add translation key for Faculty
       countdownTimer: "COUNTDOWN TIMER", // Add translation key for Countdown Timer
-      facultyCard1Name: "MOHAMMED SALMAN",
-      facultyCard1Desc:
-        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard1Name: "MD SALMAN",
+      facultyCard1Desc: "Japanese Faculty",
       facultyCard2Name: "RAGINI SHARMA",
-      facultyCard2Desc:
-        "Hover over this card to unleash the power of CSS perspective",
-      facultyCard3Name: "MOHAMMED IRFAN",
-      facultyCard3Desc:
-        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard2Desc: "Japanese Faculty",
+      facultyCard3Name: "IRFAN MOHAMMED",
+      facultyCard3Desc: "Japanese Faculty",
       facultyCard4Name: "ANAND RAJ",
-      facultyCard4Desc:
-        "Hover over this card to unleash the power of CSS perspective",
+      facultyCard4Desc: "Japanese Faculty",
       footerTitle: "Designed & Developed by Adnan and Jayaram",
       footerNameAdnan: "Adnan",
       footerNameJayaram: "Jayaram",
@@ -175,14 +171,14 @@ export const resources = {
         "洞察、ネットワーキング、そしてコラボレーションに満ちたエキサイティングなイベントに参加してください。イノベーションと文化が交わる場所、11月7日と8日の旅にご参加ください。",
       faculty: "教授陣", // Translation for Faculty
       countdownTimer: "カウントダウンタイマー", // Translation for Countdown Timer
-      facultyCard1Name: "モハメッド・サルマン",
-      facultyCard1Desc: "このカードにホバーしてCSSのパワーを解き放つ",
-      facultyCard2Name: "ラジーニ・シャルマ",
-      facultyCard2Desc: "このカードにホバーしてCSSのパワーを解き放つ",
-      facultyCard3Name: "モハメド・イルファン",
-      facultyCard3Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      facultyCard1Name: "エム ディー ・サルマン",
+      facultyCard1Desc: "日本人教員",
+      facultyCard2Name: "ラーギニ・シャルマ",
+      facultyCard2Desc: "日本人教員",
+      facultyCard3Name: "イルファン・モハメド",
+      facultyCard3Desc: "日本人教員",
       facultyCard4Name: "アナンド・ラージ",
-      facultyCard4Desc: "このカードにホバーしてCSSのパワーを解き放つ",
+      facultyCard4Desc: "日本人教員",
       footerTitle: "アドナンとジャヤラムによって設計および開発されました",
       footerNameAdnan: "アドナン",
       footerNameJayaram: "ジャヤラム",
