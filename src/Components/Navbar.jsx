@@ -62,7 +62,7 @@ const Navbar = () => {
           {/* Language Toggle Button */}
           <button
             onClick={handleLanguageChange}
-            className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-r-full transition-colors duration-300 ease-in-out"
+            className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-2 py-2 rounded-r-full transition-colors duration-300 ease-in-out"
           >
             <img
               src={

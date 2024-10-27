@@ -8,7 +8,7 @@ export const resources = {
       d2: "D-2",
       activities: "Activities",
       register: "Register Now",
-      japanese: "Japanese",
+      japanese: "日本語　",
       english: "English",
       inCollaborationWith: "In Collaboration With",
       jetaa: "JETAA",
@@ -104,53 +104,65 @@ export const resources = {
         "A movie related to the event theme is screened for attendees. Participants enjoy the cinematic experience together.",
       conclusionDesc:
         "The event is officially concluded with closing remarks. Final farewells and acknowledgments are made to the participants.",
+
+      //---------------------------------------------------------------------------------------------------------------------------------
+
+      ACT: "ACTIVITY BOOTHS",
+      STP: "STAGE PERFORMANCE",
+
+      yukataTitle: "Yukata Fashion Walk",
+      karaokeTitle: "Karaoke Performance",
+      folkTitle: "Inaugural Classic Dance",
+      boysDanceTitle: "Boys Singing Performance",
+      girlsDanceTitle: "Girls Singing Performance",
+      judoTitle: "Soranbushi Group Performance",
+      bhartanattyamTitle: "Dance Performance On Indian Music",
+      speechTitle: "Speech Contest",
+      prize: "Prize Distribution",
+      //-------------------------
+
+      knowTitle: "Knowledge Corner",
+      chopstickTitle: "Chopstick Corner",
+      calligraphyTitle: "Calligraphy",
+      kanjiTitle: "Kanji Game Corner",
+      origamiTitle: "Origami Corner",
+      Art: "Art Corner",
+      yukaPTitle: "Yukata Photo Booth",
+
+      yukataDesc:
+        "Experience the elegance of traditional Japanese fashion as participants showcase beautiful yukatas. Each ensemble brings the timeless charm of Japanese culture to life, blending traditional patterns with modern flair.",
+      karaokeDesc:
+        "A Karaoke Performance is a fun and interactive event where participants sing along to popular songs, with lyrics displayed on a screen. This activity is a popular form of entertainment in Japan and has become a global sensation. The performance allows participants to showcase their singing talent or simply have fun with friends in a relaxed and entertaining environment.",
+      folkDesc:
+        "Celebrate the opening ceremony with a traditional dance performance that captures the grace and rhythm of classic styles. This inaugural dance sets the tone for an evening of cultural richness and artistry.",
+      boysDanceDesc:
+        "A melodious treat awaits as the boys take the stage with a singing performance filled with joy and energy. This event celebrates talent, rhythm, and vocal creativity.",
+      girlsDanceDesc:
+        "Watch as the girls light up the stage with their beautiful voices in this engaging singing performance. Their songs will captivate the audience and create lasting memories.",
+      judoDesc:
+        "An invigorating group performance of the Soranbushi dance, known for its powerful movements and energetic rhythm. This traditional dance captures the spirit and strength of Japanese heritage.",
+      bhartanattyamDesc:
+        "A captivating dance set to vibrant Indian music, showcasing the beauty and diversity of Indian cultural expressions. Each move reflects the grace and tradition of Indian dance forms.",
+      speechDesc:
+        "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of the Japanese language and culture. Participants are judged on the content of their speech, their delivery, and their ability to engage the audience.",
+      prizeDesc:
+        "The culmination of the event, where outstanding participants are recognized for their efforts and achievements. Each prize represents hard work, dedication, and a memorable contribution to the festivities.",
+      //-----------------------------------
+      knowDesc:
+        "Dive into Japanese culture and history at the Knowledge Corner! This interactive exhibit offers fascinating facts, insights, and trivia about Japan’s rich heritage, art, and traditions.",
+      chopstickDesc:
+        "The Chopstick Skills event tests participants' dexterity and precision in handling chopsticks, a traditional Japanese utensil. Participants engage in various challenges, such as picking up small objects or transferring items from one bowl to another, to demonstrate their proficiency. This fun and engaging activity also educates attendees about Japanese dining customs and etiquette.",
+      calligraphyDesc:
+        "Calligraphy is the art of beautiful handwriting, and in Japan, it holds deep cultural significance. This event offers participants the opportunity to practice the ancient art of Japanese calligraphy, learning to write kanji and hiragana characters using traditional brushes and ink. It is both a meditative and artistic experience, connecting participants with the essence of Japanese culture.",
+      origamiDesc:
+        "Origami, the traditional Japanese art of paper folding, allows participants to create intricate shapes and figures using only a single sheet of paper. This event teaches the fundamental techniques of origami, encouraging creativity and patience. Participants can create everything from simple designs to complex structures, highlighting the beauty of this ancient art form.",
+      kanjiDesc:
+        "Put your Kanji skills to the test with fun games at the Kanji Game Corner! This activity challenges participants to identify and write Japanese characters, making learning fun and engaging.",
+      ArtDesc:
+        "Let your imagination soar at the Art Corner! Participants can express themselves through painting, drawing, and other creative activities inspired by Japanese art and culture.",
+      yukaPDesc:
+        "Capture the moment at the Yukata Photo Booth! Dress up in a traditional yukata and strike a pose for a memorable photo, taking a piece of Japanese culture with you as a keepsake.",
     },
-
-    //---------------------------------------------------------------------------------------------------------------------------------
-
-    yukataTitle: "Yukata Fashion Walk",
-    karaokeTitle: "Karaoke Performance",
-    folkTitle: "Japanese Folk Dance",
-    boysDanceTitle: "Boys Dance Performance",
-    girlsDanceTitle: "Girls Dance Performance",
-    judoTitle: "Judo Performance",
-    bhartanattyamTitle: "Bhartanattyam Performance By Girls",
-    speechTitle: "Speech Contest",
-    posterTitle: "Poster Presentation",
-    chopstickTitle: "Chopstick Skills",
-    calligraphyTitle: "Calligraphy",
-    origamiTitle: "Origami",
-    tableGameTitle: "Table Game",
-    essayTitle: "Essay Competition",
-
-    yukataDesc:
-      "A Yukata Fashion Walk is a cultural and fashion event where participants wear yukatas—a traditional, casual Japanese garment—and perform a ramp walk, similar to a fashion show. The participants showcase various styles and designs of yukata, highlighting the rich cultural heritage and modern interpretations of this traditional attire. It is a vibrant and colorful event that brings together fashion, culture, and fun.",
-    karaokeDesc:
-      "A Karaoke Performance is a fun and interactive event where participants sing along to popular songs, with lyrics displayed on a screen. This activity is a popular form of entertainment in Japan and has become a global sensation. The performance allows participants to showcase their singing talent or simply have fun with friends in a relaxed and entertaining environment.",
-    folkDesc:
-      "The Japanese Folk Dance Performance is a beautiful and culturally rich showcase of traditional Japanese dance forms. These dances have been passed down through generations and are often performed at festivals and special occasions. The performance highlights the grace, precision, and symbolism behind each movement, connecting modern audiences with the deep traditions of Japan.",
-    boysDanceDesc:
-      "The Boys Dance Performance is a high-energy and dynamic showcase where talented boys take the stage to perform choreographed dance routines. Combining modern dance styles with traditional influences, this performance will captivate the audience with its rhythm, precision, and creativity. The boys demonstrate incredible skill and passion, leaving a lasting impression on the audience.",
-    girlsDanceDesc:
-      "The Girls Dance Performance is a vibrant and captivating showcase featuring talented girls performing a range of choreographed dance routines. With grace, style, and energy, this performance highlights the creativity and skill of the dancers. The girls incorporate both modern and traditional dance elements, creating a visually stunning and entertaining show.",
-    judoDesc:
-      "Judo is a modern martial art and Olympic sport that originated in Japan. It focuses on using leverage and technique to subdue an opponent rather than relying on brute strength. This performance will demonstrate various judo techniques, including throws, holds, and submissions, emphasizing the discipline, precision, and respect that are central to this martial art.",
-    bhartanattyamDesc:
-      "Bharatanatyam is one of the oldest and most revered classical dance forms of India, originating from the temples of Tamil Nadu. This graceful and expressive dance form combines intricate footwork, facial expressions, and hand gestures (mudras) to tell stories, often based on themes from Hindu mythology. The performance showcases the spiritual depth and artistic beauty of Bharatanatyam, bringing a piece of Indian tradition to the audience.",
-    speechDesc:
-      "A Speech Contest is a competitive event where participants deliver speeches, typically in Japanese, on various topics such as culture, international relations, or personal experiences. The contest helps showcase public speaking skills and knowledge of the Japanese language and culture. Participants are judged on the content of their speech, their delivery, and their ability to engage the audience.",
-    posterDesc:
-      "A Poster Presentation allows participants to visually present their research, ideas, or projects through a well-designed poster. This event encourages creativity and effective communication as participants must convey their message clearly and concisely to the audience. It is a great opportunity for participants to showcase their knowledge and design skills.",
-    chopstickDesc:
-      "The Chopstick Skills event tests participants' dexterity and precision in handling chopsticks, a traditional Japanese utensil. Participants engage in various challenges, such as picking up small objects or transferring items from one bowl to another, to demonstrate their proficiency. This fun and engaging activity also educates attendees about Japanese dining customs and etiquette.",
-    calligraphyDesc:
-      "Calligraphy is the art of beautiful handwriting, and in Japan, it holds deep cultural significance. This event offers participants the opportunity to practice the ancient art of Japanese calligraphy, learning to write kanji and hiragana characters using traditional brushes and ink. It is both a meditative and artistic experience, connecting participants with the essence of Japanese culture.",
-    origamiDesc:
-      "Origami, the traditional Japanese art of paper folding, allows participants to create intricate shapes and figures using only a single sheet of paper. This event teaches the fundamental techniques of origami, encouraging creativity and patience. Participants can create everything from simple designs to complex structures, highlighting the beauty of this ancient art form.",
-    tableGameDesc:
-      "The Table Game event features a variety of indoor games that are played on a table, including traditional Japanese games such as Go, Shogi, and Mahjong. Participants have the opportunity to learn the rules and strategies of these games, which are not only fun but also require deep concentration and skill. It is a relaxing yet intellectually stimulating activity.",
-    essayDesc:
-      "An Essay Competition allows participants to express their thoughts on various topics in writing. Participants are encouraged to explore themes related to Japanese culture, international relations, or personal experiences. This event fosters critical thinking and creativity, as well as providing a platform for participants to showcase their writing abilities.",
   },
   jp: {
     translation: {
@@ -241,50 +253,60 @@ export const resources = {
         "イベントは公式に終了し、閉会の言葉で締めくくられます。最終的な別れと参加者への感謝が述べられます。",
 
       //----------
-
+      ACT: "アクティビティブース",
+      STP: "ステージパフォーマンス",
       yukataTitle: "浴衣ファッションウォーク",
       karaokeTitle: "カラオケパフォーマンス",
-      folkTitle: "日本民謡ダンス",
-      boysDanceTitle: "男子ダンスパフォーマンス",
-      girlsDanceTitle: "女子ダンスパフォーマンス",
-      judoTitle: "柔道パフォーマンス",
-      bhartanattyamTitle: "女子によるバラタナティヤム",
+      folkTitle: "初演クラシックダンス",
+      boysDanceTitle: "男の子歌唱パフォーマンス",
+      girlsDanceTitle: "女の子歌唱パフォーマンス",
+      judoTitle: "ソランブシグループパフォーマンス",
+      bhartanattyamTitle: "インド音楽によるダンスパフォーマンス",
       speechTitle: "スピーチコンテスト",
-      posterTitle: "ポスター発表",
-      chopstickTitle: "箸のスキル",
+      prize: "賞の授与",
+      //-------------------------
+
+      knowTitle: "知識コーナー",
+      chopstickTitle: "箸コーナー",
       calligraphyTitle: "書道",
-      origamiTitle: "折り紙",
-      tableGameTitle: "テーブルゲーム",
-      essayTitle: "エッセイコンテスト",
+      kanjiTitle: "漢字ゲームコーナー",
+      origamiTitle: "折り紙コーナー",
+      Art: "アートコーナー",
+      yukaPTitle: "浴衣フォトブース",
 
       yukataDesc:
-        "浴衣ファッションウォークは、参加者が浴衣を着てランウェイを歩くファッションイベントです。浴衣は日本の伝統的なカジュアルな衣装であり、このイベントではさまざまなスタイルやデザインが披露されます。文化遺産と現代の解釈を融合させたこの鮮やかでカラフルなイベントは、ファッションと文化の楽しさを一緒に体験できる場となります。",
+        "参加者が美しい浴衣を披露し、伝統的な日本のファッションの優雅さを体験できます。それぞれの衣装は、日本文化の時代を超えた魅力を生き生きと表現し、伝統的なパターンと現代的なセンスが融合しています。",
       karaokeDesc:
-        "カラオケパフォーマンスは、参加者が人気の曲に合わせて歌う楽しいイベントです。歌詞が画面に表示されるため、誰でも気軽に参加でき、リラックスした環境で友人たちと楽しむことができます。日本で非常に人気があり、世界中で広く親しまれているカラオケは、楽しいエンターテインメントの一環として欠かせない存在です。",
+        "カラオケパフォーマンスは、参加者が人気の曲に合わせて歌い、歌詞がスクリーンに表示される楽しくインタラクティブなイベントです。このアクティビティは日本で人気のあるエンターテインメント形式であり、世界中で広がっています。このパフォーマンスでは、参加者が歌の才能を披露したり、リラックスした楽しい環境で友達と楽しむことができます。",
       folkDesc:
-        "日本民謡ダンスパフォーマンスは、日本の伝統的な舞踊を披露する文化的に豊かなイベントです。これらの踊りは何世代にもわたって伝承され、祭りや特別な機会にしばしば披露されます。現代の観客と日本の深い伝統をつなげるこのパフォーマンスは、優雅さ、正確さ、そして象徴的な動きを通して観客を魅了します。",
+        "オープニングセレモニーを祝うために、クラシックスタイルの優雅さとリズムを捉えた伝統的なダンスパフォーマンスが行われます。この初演のダンスは、文化の豊かさと芸術性にあふれる夜の雰囲気を作り出します。",
       boysDanceDesc:
-        "男子ダンスパフォーマンスは、才能ある男子が舞台でさまざまな振り付けを披露する高エネルギーなショーケースです。現代のダンススタイルと伝統的な影響を組み合わせたこのパフォーマンスは、リズム、正確さ、創造力で観客を魅了します。男子ダンサーたちは、見事なスキルと情熱を持ち、観客に強い印象を残します。",
+        "男の子たちがエネルギーと喜びに満ちた歌唱パフォーマンスで舞台に登場します。このイベントは、才能、リズム、そしてボーカルの創造性を祝います。",
       girlsDanceDesc:
-        "女子ダンスパフォーマンスは、才能ある女子たちがさまざまな振り付けを披露する活気に満ちたショーケースです。優雅さ、スタイル、エネルギーがあふれるこのパフォーマンスは、ダンサーたちの創造性とスキルを際立たせます。現代と伝統のダンス要素を組み合わせたパフォーマンスは、視覚的に美しく、観客に感動を与えます。",
+        "女の子たちがその美しい声で舞台を照らし、参加者の心をつかむ歌唱パフォーマンスをお楽しみください。彼女たちの歌は観客を魅了し、思い出に残る瞬間を作ります。",
       judoDesc:
-        "柔道は日本で生まれた現代の武道であり、オリンピック種目でもあります。力ではなく、技術やレバレッジを使って相手を制圧することを重視します。このパフォーマンスでは、投げ技、ホールド、サブミッションなど、さまざまな柔道技術が披露され、柔道における規律、正確さ、尊敬の精神が強調されます。",
+        "力強い動きとエネルギッシュなリズムで知られるソランブシのダンスのグループパフォーマンスが行われます。この伝統的なダンスは、日本の遺産の精神と力強さを捉えています。",
       bhartanattyamDesc:
-        "バラタナティヤムは、タミル・ナードゥ州の寺院から発展した、最も古いインドの古典舞踊の一つです。この優雅で表現豊かな踊りは、複雑な足の動き、表情、手のジェスチャー（ムドラ）を組み合わせて物語を伝えます。このパフォーマンスは、バラタナティヤムの精神的な深さと芸術的な美しさを示し、観客にインドの伝統の一部を届けます。",
+        "インド音楽に合わせた魅力的なダンスで、インドの文化的表現の美しさと多様性を紹介します。各動きは、インドのダンス形式の優雅さと伝統を反映しています。",
       speechDesc:
-        "スピーチコンテストは、参加者が文化、国際関係、または個人的な経験についてスピーチを行う競技イベントです。このコンテストは、日本語や日本文化の知識を披露する場として重要で、スピーチの内容、発表技術、観客との関わり方が評価されます。",
-      posterDesc:
-        "ポスター発表では、参加者が研究、アイデア、プロジェクトをビジュアルで発表します。このイベントは創造性と効果的なコミュニケーションを奨励し、参加者はメッセージを明確かつ簡潔に伝えることが求められます。知識とデザインスキルを披露する絶好の機会です。",
+        "スピーチコンテストは、参加者が文化、国際関係、または個人的な経験など、さまざまなトピックに関してスピーチを行う競技イベントです。このコンテストは、公共のスピーキングスキルや日本語・日本文化の知識を示すのに役立ちます。参加者は、スピーチの内容、表現方法、および観客との関わり方が評価されます。",
+      prizeDesc:
+        "イベントのクライマックスで、優れた参加者がその努力と成果を認められます。それぞれの賞は、努力、献身、そしてお祝いに対する記憶に残る貢献を象徴しています。",
+      //-----------------------------------
+      knowDesc:
+        "知識コーナーで日本の文化と歴史に触れてみましょう！このインタラクティブな展示では、日本の豊かな遺産、アート、伝統に関する興味深い事実や洞察を提供します。",
       chopstickDesc:
-        "箸のスキルイベントでは、参加者が箸を使う器用さと正確さを試されます。小さな物をつかんだり、ボウルからボウルへ物を移動させたりするなど、さまざまな課題に取り組みます。この楽しく魅力的なアクティビティは、参加者に日本の食事の習慣やマナーについても学ぶ機会を提供します。",
+        "箸スキルイベントでは、伝統的な日本の器具である箸を扱う技術と精度をテストします。参加者は、小さな物を拾ったり、別のボウルから物を移したりするさまざまなチャレンジに参加し、技術を示します。この楽しく参加型のアクティビティでは、日本の食事の習慣やエチケットについても学ぶことができます。",
       calligraphyDesc:
-        "書道は美しい文字を書く芸術で、日本では深い文化的意義があります。このイベントでは、参加者が伝統的な筆と墨を使って、漢字やひらがなを練習し、日本文化の本質に触れることができます。精神的で芸術的な体験を提供します。",
+        "書道は美しい手書きのアートであり、日本では深い文化的意義を持っています。このイベントでは、参加者が伝統的な筆とインクを使用して、漢字やひらがなの文字を書く古代のアートを練習する機会が提供されます。これは、参加者を日本文化の本質と結びつける、瞑想的でありながら芸術的な体験です。",
       origamiDesc:
-        "折り紙は、日本の伝統的な紙を折る芸術です。このイベントでは、参加者が基本的な技法を学び、創造性と忍耐力を養います。シンプルなデザインから複雑な構造まで、さまざまな形を作成し、この古代芸術の美しさを強調します。",
-      tableGameDesc:
-        "テーブルゲームイベントでは、囲碁、将棋、麻雀などの伝統的な日本のゲームがプレイされます。参加者はこれらのゲームのルールや戦略を学ぶ機会があり、楽しみながら知的に刺激されます。リラックスしながらも頭脳を使う、楽しいアクティビティです。",
+        "折り紙は、日本の伝統的な紙折りのアートであり、参加者が一枚の紙だけを使用して複雑な形や図を作成します。このイベントでは、折り紙の基本的な技術を教え、創造性と忍耐を促します。参加者は、シンプルなデザインから複雑な構造まで、さまざまな作品を作成し、この古代のアート形式の美しさを強調します。",
+      kanjiDesc:
+        "漢字ゲームコーナーで楽しいゲームを通じて漢字のスキルを試してみましょう！このアクティビティでは、参加者が日本の文字を識別し、書くことに挑戦し、楽しく学べる体験を提供します。",
+      ArtDesc:
+        "アートコーナーで想像力を羽ばたかせましょう！参加者は、日本のアートと文化にインスパイアされた絵画、描画、その他の創造的なアクティビティを通じて自己表現ができます。",
       essayDesc:
-        "エッセイコンテストでは、参加者が文化、国際関係、または個人的な経験に関するテーマについて文章で意見を述べることが求められます。このイベントは批判的思考と創造性を促進し、参加者が文章能力を発揮する場となります。",
+        "浴衣フォトブースでその瞬間をキャッチしましょう！伝統的な浴衣を着てポーズを決め、思い出の一枚を撮影し、日本文化の一部を記念品として持ち帰ることができます。",
     },
   },
 };
