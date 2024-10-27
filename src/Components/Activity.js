@@ -287,7 +287,7 @@ export function Activity() {
               <div
                 className="flex flex-1 w-full rounded-lg mt-4 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('/assets/images/M10.jpEg')",
+                  backgroundImage: "url('/assets/images/M10.jpeg')",
                 }}
               />
             </div>
