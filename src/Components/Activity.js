@@ -13,9 +13,21 @@ export function Activity() {
   return (
     <div className="h-auto w-full flex items-center justify-center flex-col py-10 mt-24">
       <HyperText
-        className="text-6xl font-bold text-black dark:text-white pb-16"
+        className="
+          text-3xl 
+          sm:text-4xl 
+          md:text-5xl 
+          lg:text-6xl 
+          xl:text-7xl 
+          font-bold 
+          text-black 
+          pb-8 
+          sm:pb-12 
+          lg:pb-16
+        "
         text={t("STP")}
       />
+
       <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
         <div
           onClick={() =>
@@ -263,9 +275,22 @@ export function Activity() {
       </div>
       {/* ---------------------------------  New Activities ------------------------------------------ */}
       <HyperText
-        className="text-6xl font-bold text-black dark:text-white tracking-wider mt-20 pb-16"
+        className="
+        text-3xl 
+        sm:text-4xl 
+        md:text-5xl 
+        lg:text-6xl 
+        xl:text-7xl 
+        font-bold 
+        text-black 
+
+        pb-8 
+        sm:pb-12 
+        lg:pb-16
+      "
         text={t("ACT")}
       />
+
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
         <div
           onClick={() =>
