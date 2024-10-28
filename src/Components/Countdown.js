@@ -9,6 +9,7 @@ const Countdown = ({ targetDate }) => {
 
     if (difference > 0) {
       timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
@@ -74,13 +75,15 @@ const Countdown = ({ targetDate }) => {
   };
 
   useEffect(() => {
+    const $days1 = document.querySelector(".days-1");
+    const $days2 = document.querySelector(".days-2");
     const $hours1 = document.querySelector(".hours-1");
     const $hours2 = document.querySelector(".hours-2");
     const $minutes1 = document.querySelector(".min-1");
     const $minutes2 = document.querySelector(".min-2");
     const $seconds1 = document.querySelector(".sec-1");
     const $seconds2 = document.querySelector(".sec-2");
-
+    checkAndAnimate(timeLeft.days, $days1, $days2);
     checkAndAnimate(timeLeft.hours, $hours1, $hours2);
     checkAndAnimate(timeLeft.minutes, $minutes1, $minutes2);
     checkAndAnimate(timeLeft.seconds, $seconds1, $seconds2);
@@ -88,9 +91,33 @@ const Countdown = ({ targetDate }) => {
 
   return (
     <>
-      <div className="relative flex h-[500px] w-[800px] flex-col items-center justify-center overflow-hidden rounded-lg  bg-inherit">
+      <div className="relative flex h-[500px] w-[1000px] flex-col items-center justify-center overflow-hidden rounded-lg  bg-inherit">
         <div className="wrap">
           <div className="countdown">
+            <div className="bloc-time days" data-init-value="00">
+              <span className="count-title">Days</span>
+              <div className="figure days days-1">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+              <div className="figure days days-2">
+                <span className="top">0</span>
+                <span className="top-back">
+                  <span>0</span>
+                </span>
+                <span className="bottom">0</span>
+                <span className="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+
             <div className="bloc-time hours" data-init-value="24">
               <span className="count-title">Hours</span>
               <div className="figure hours hours-1">
@@ -185,19 +212,41 @@ const Countdown = ({ targetDate }) => {
           color: #1a1a1a;
         }
 
-        .countdown {
-          width: 720px;
-          margin: 0 auto;
+.countdown {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
 
-          .bloc-time {
-            float: left;
-            margin-right: 45px;
-            text-align: center;
+.bloc-time {
+  margin: 0 10px; /* Reducing margin for closer alignment */
+  text-align: center;
+}
 
-            &:last-child {
-              margin-right: 0;
-            }
-          }
+.count-title {
+  margin-bottom: 10px; /* Slightly closer title to the figures */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .bloc-time {
+    margin: 0 5px; /* Further reduce margins on smaller screens */
+  }
+  
+  .figure {
+    height: 80px;
+    width: 60px;
+  }
+
+  .figure > span {
+    font-size: 3em; /* Adjust font size for smaller screens */
+  }
+}
+
+
 
           .count-title {
             display: block;
