@@ -109,7 +109,7 @@ export const resources = {
 
       ACT: "ACTIVITY BOOTHS",
       STP: "STAGE PERFORMANCE",
-
+      det: "View Details",
       yukataTitle: "Yukata Fashion Walk",
       karaokeTitle: "Karaoke Performance",
       folkTitle: "Inaugural Classic Dance",
@@ -266,6 +266,7 @@ export const resources = {
       prize: "賞の授与",
       //-------------------------
 
+      det: "詳細を見る",
       knowTitle: "知識コーナー",
       chopstickTitle: "箸コーナー",
       calligraphyTitle: "書道",
