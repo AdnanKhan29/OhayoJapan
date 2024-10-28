@@ -15,12 +15,15 @@ const Navbar = () => {
     <>
       {/* Shimmer Button at the top of the page */}
       <div className="fixed z-50 top-4 left-1/2 transform -translate-x-1/2">
-        <ShimmerButton className="shadow-2xl">
-          <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-            {t("register")}
-          </span>
-        </ShimmerButton>
+        <a href="https://forms.gle/kJ99Qo2cb78ffNg47" target="_blank" rel="noopener noreferrer">
+          <ShimmerButton className="shadow-2xl">
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+              {t("register")}
+            </span>
+          </ShimmerButton>
+        </a>
       </div>
+
 
       {/* Navbar at the bottom of the page */}
       <div className="fixed z-50 w-full h-14 max-w-lg transform -translate-x-1/2 border border-gray-300 rounded-full bottom-4 left-1/2 bg-white shadow-md">
