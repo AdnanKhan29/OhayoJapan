@@ -47,7 +47,7 @@ export function Activity() {
             <CardItem translateZ="100" className="w-full mt-4">
               <img
                 src="/assets/images/IM1.webp"
-                className="h-40 sm:h-56 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-40 sm:h-56 lg:h-96 max-w-md w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={t("yukataDesc")}
               />
             </CardItem>
@@ -281,7 +281,7 @@ export function Activity() {
             <CardItem translateZ="100" className="w-full mt-4">
               <img
                 src="/assets/images/S.jpg"
-                className="h-40 sm:h-56 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-40 sm:h-56 lg:h-96 max-w-sm w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={t("judoDesc")}
               />
             </CardItem>
@@ -422,7 +422,7 @@ export function Activity() {
             <CardItem translateZ="100" className="w-full mt-4">
               <img
                 src="/assets/images/P.jpg"
-                className="h-40 sm:h-56 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-40 sm:h-56 lg:h-96 max-w-sm w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={t("prizeDesc")}
               />
             </CardItem>
@@ -580,7 +580,7 @@ export function Activity() {
             <CardItem translateZ="100" className="w-full mt-4">
               <img
                 src="/assets/images/CA.webp"
-                className="h-40 sm:h-56 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-40 sm:h-56 lg:h-96 max-w-sm w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={t("calligraphyDesc")}
               />
             </CardItem>
@@ -672,7 +672,7 @@ export function Activity() {
             <CardItem translateZ="100" className="w-full mt-4">
               <img
                 src="/assets/images/CA.webp"
-                className="h-40 sm:h-56 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-40 sm:h-56 lg:h-96 max-w-sm w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={t("calligraphyDesc")}
               />
             </CardItem>
