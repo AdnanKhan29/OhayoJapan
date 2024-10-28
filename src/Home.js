@@ -112,6 +112,23 @@ export default function Home() {
     <>
       <section
         style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          zIndex: 3, // Ensure it stays on top
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
+      >
+        <img
+          src="/assets/images/kllogo.svg" // Replace with the actual KLU logo URL
+          alt="KLU Logo"
+          style={{ width: "150px", height: "auto", marginBottom: "10px" }}
+        />
+      </section>
+      <section
+        style={{
           backgroundImage: `url("/assets/images/bg2.webp")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -123,6 +140,18 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.2)",
+            zIndex: 1,
+          }}
+        ></div>
+
         {/* Render petals only if showPetals is true */}
         {showPetals && (
           <div className="falling-petals-container">
@@ -137,18 +166,57 @@ export default function Home() {
           style={{
             zIndex: 2,
             textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
           <motion.img
             src="/assets/images/logo.png"
             alt="Logo"
             style={{
-              width: "60vw",
+              width: "40vw",
               height: "auto",
               maxWidth: "400px",
+              marginBottom: "10px",
+            }}
+          />
+
+          {/* "X" with custom styling */}
+          <span className="separator-x">X</span>
+
+          {/* Replace department text with another logo */}
+          <img
+            src="/assets/images/ll5.png" /* Replace with the path to your new logo */
+            alt="Department Logo"
+            style={{
+              width: "20vw",
+              height: "auto",
+              maxWidth: "350px",
+              marginTop: "2px",
             }}
           />
         </motion.div>
+
+        <style jsx>{`
+          .separator-x {
+            font-size: 3vw;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds depth */
+            margin-bottom: 2px;
+            letter-spacing: 2px; /* Space between letters */
+          }
+
+          @media (max-width: 768px) {
+            .separator-x {
+              font-size: 5vw; /* Responsive for smaller screens */
+            }
+            img {
+              width: 20vw; /* Adjust logo size for smaller screens */
+            }
+          }
+        `}</style>
       </section>
 
       <section
@@ -371,7 +439,7 @@ export default function Home() {
         </span>
 
         {/* Dean Card */}
-        <div className="flex justify-center mt-12">
+        <div className="flex flex-wrap justify-center gap-8 mt-12">
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 text-center relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
               <CardItem
@@ -395,6 +463,32 @@ export default function Home() {
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 {t("deanCardDesc")} {/* Translated description */}
+              </CardItem>
+            </CardBody>
+          </CardContainer>
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 text-center relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardItem
+                translateZ="50"
+                className="text-md font-bold text-neutral-600 dark:text-white"
+              >
+                {t("deanCardName1")} {/* Translated name */}
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="/assets/images/dd2.png" // Replace with the actual dean's image URL
+                  height="1000"
+                  width="1000"
+                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="Dean of International Relations"
+                />
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                {t("deanCardDesc1")} {/* Translated description */}
               </CardItem>
             </CardBody>
           </CardContainer>
