@@ -435,7 +435,7 @@ export default function Home() {
             maxWidth: "100vw", // Ensure text doesn't overflow the viewport
           }}
         >
-          {t("deanInternationalRelations")} {/* Translated text */}
+          {t("deanInternationalRelations1")} {/* Translated text */}
         </span>
 
         {/* Dean Card */}
@@ -466,33 +466,51 @@ export default function Home() {
               </CardItem>
             </CardBody>
           </CardContainer>
-          <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 text-center relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-md font-bold text-neutral-600 dark:text-white"
-              >
-                {t("deanCardName1")} {/* Translated name */}
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <img
-                  src="/assets/images/dd2.png" // Replace with the actual dean's image URL
-                  height="1000"
-                  width="1000"
-                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="Dean of International Relations"
-                />
-              </CardItem>
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-              >
-                {t("deanCardDesc1")} {/* Translated description */}
-              </CardItem>
-            </CardBody>
-          </CardContainer>
         </div>
+      </section>
+      <section
+        style={{
+          backgroundColor: "#ffffff", // Background color for the section
+          padding: "50px 20px",
+          textAlign: "center",
+          color: "#000000", // Black text color for contrast
+        }}
+      >
+        <span
+          className="november-text pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-center font-semibold leading-none text-transparent"
+          style={{
+            fontSize: "6vw", // Initial size for larger screens
+            maxWidth: "100vw", // Ensure text doesn't overflow the viewport
+          }}
+        >
+          {t("deanInternationalRelations")} {/* Translated text */}
+        </span>
+        <CardContainer className="inter-var">
+          <CardBody className="bg-gray-50 text-center relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+            <CardItem
+              translateZ="50"
+              className="text-md font-bold text-neutral-600 dark:text-white"
+            >
+              {t("deanCardName1")} {/* Translated name */}
+            </CardItem>
+            <CardItem translateZ="100" className="w-full mt-4">
+              <img
+                src="/assets/images/dd2.png" // Replace with the actual dean's image URL
+                height="1000"
+                width="1000"
+                className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                alt="Dean of International Relations"
+              />
+            </CardItem>
+            <CardItem
+              as="p"
+              translateZ="60"
+              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+            >
+              {t("deanCardDesc1")} {/* Translated description */}
+            </CardItem>
+          </CardBody>
+        </CardContainer>
       </section>
 
       <section

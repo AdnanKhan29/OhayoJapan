@@ -23,10 +23,12 @@ export const resources = {
       faculty: "Faculty", // Add translation key for Faculty
       countdownTimer: "COUNTDOWN TIMER", // Add translation key for Countdown Timer
       deanInternationalRelations: "DEPARTMENT HEAD",
+      deanInternationalRelations1: "DEAN INTERNATIONAL RELATIONS",
       deanCardName: "Dr KISHOR BABU",
-      deanCardDesc: "DEAN INTERNATIONAL RELATIONS & MHS",
+      deanCardDesc: "DEAN INTERNATIONAL RELATIONS & MHS, CONVENER OF THE FEST",
       deanCardName1: "JAMINDAR BUDDIGA",
-      deanCardDesc1: "HEAD OF DEPARTMENT OF FOREIGN LANGUAGES",
+      deanCardDesc1:
+        "HEAD OF DEPARTMENT OF FOREIGN LANGUAGES, CO-CONVENER OF THE FEST",
       facultyCard1Name: "MD SALMAN",
       facultyCard1Desc: "Japanese Faculty",
       facultyCard2Name: "RAGINI SHARMA",
@@ -180,10 +182,11 @@ export const resources = {
       english: "English",
       inCollaborationWith: "共同開催",
       deanInternationalRelations: "部長",
+      deanInternationalRelations1: "国際関係学部長",
       deanCardName: "キショール・バブ博士",
-      deanCardDesc: "国際関係およびMHS学部長",
+      deanCardDesc: "国際関係およびMHS学部長, フェストの招集者",
       deanCardName1: "ジャミンダル・ブッガ",
-      deanCardDesc1: "外国語学部部長",
+      deanCardDesc1: "外国語学部部長, フェストの共同主催者",
       dept: "外国語学部",
       jetaa: "JETAA",
       clair: "CLAIR",
