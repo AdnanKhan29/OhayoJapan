@@ -20,7 +20,7 @@ export const resources = {
       date: "7TH AND 8TH",
       eventInfo:
         "Join us for an exciting event filled with insights, networking, and collaboration. Be part of the journey on the 7th and 8th of November, where innovation meets culture.",
-      faculty: "Faculty", // Add translation key for Faculty
+      faculty: "FACULTY", // Add translation key for Faculty
       countdownTimer: "COUNTDOWN TIMER", // Add translation key for Countdown Timer
       deanInternationalRelations: "DEPARTMENT HEAD",
       deanInternationalRelations1: "DEAN INTERNATIONAL RELATIONS",
