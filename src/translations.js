@@ -30,7 +30,7 @@ export const resources = {
       deanCardDesc1:
         "HEAD OF DEPARTMENT OF FOREIGN LANGUAGES, CO-CONVENER OF THE FEST",
       facultyCard1Name: "MD SALMAN",
-      facultyCard1Desc: "Japanese Faculty",
+      facultyCard1Desc: "Japanese Faculty, Chief Coordinator of Ohayou Japan ",
       facultyCard2Name: "RAGINI SHARMA",
       facultyCard2Desc: "Japanese Faculty",
       facultyCard3Name: "IRFAN MOHAMMED",
@@ -199,7 +199,7 @@ export const resources = {
       faculty: "教授陣", // Translation for Faculty
       countdownTimer: "カウントダウンタイマー", // Translation for Countdown Timer
       facultyCard1Name: "エム ディー ・サルマン",
-      facultyCard1Desc: "日本人教員",
+      facultyCard1Desc: "日本人教員, オハユージャパン チーフコーディネーター",
       facultyCard2Name: "ラーギニ・シャルマ",
       facultyCard2Desc: "日本人教員",
       facultyCard3Name: "イルファン・モハメド",
