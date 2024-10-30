@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       {/* Shimmer Button at the top of the page */}
       <div className="fixed z-50 top-4 left-1/2 transform -translate-x-1/2">
-        <a href="https://forms.gle/kJ99Qo2cb78ffNg47" target="_blank" rel="noopener noreferrer">
+        <a href="https://forms.gle/9v26DLKyoxJrWGSk8" target="_blank" rel="noopener noreferrer">
           <ShimmerButton className="shadow-2xl">
             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
               {t("register")}
