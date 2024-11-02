@@ -13,7 +13,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Shimmer Button at the top of the page */}
       <div className="fixed z-50 top-4 left-1/2 transform -translate-x-1/2">
         <a href="https://forms.gle/9v26DLKyoxJrWGSk8" target="_blank" rel="noopener noreferrer">
           <ShimmerButton className="shadow-2xl">
@@ -23,20 +22,14 @@ const Navbar = () => {
           </ShimmerButton>
         </a>
       </div>
-
-
-      {/* Navbar at the bottom of the page */}
       <div className="fixed z-50 w-full h-14 max-w-lg transform -translate-x-1/2 border border-gray-300 rounded-full bottom-4 left-1/2 bg-white shadow-md">
         <div className="grid h-full grid-cols-5">
-          {/* Home Button */}
           <Link
             to="/"
             className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 rounded-l-full transition-colors duration-300 ease-in-out"
           >
             {t("home")}
           </Link>
-
-          {/* Day 1 Button */}
           <Link
             to="/day1"
             className="flex items-center justify-center text-gray-700 hover:bg-gray-200 text-sm font-semibold px-5 py-2 transition-colors duration-300 ease-in-out"
