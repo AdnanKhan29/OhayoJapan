@@ -87,6 +87,10 @@ export function TimelineDemo2() {
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
           {t("afternoonWorkshopsTitleDay2")}
           </h1>
+          <br></br>
+          <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-teal-600 inline-block text-transparent bg-clip-text mb-6">
+          {t("venue2")}
+          </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("afternoonWorkshopsDescDay2")} />
           </p>
@@ -111,6 +115,10 @@ export function TimelineDemo2() {
         <div>
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
           {t("movieScreeningTitle")}
+          </h1>
+          <br></br>
+          <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-teal-600 inline-block text-transparent bg-clip-text mb-6">
+          {t("venue1")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("movieScreeningDesc")} />

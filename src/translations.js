@@ -49,6 +49,9 @@ export const resources = {
       guestsArrivalTitle: "ARRIVAL OF GUESTS",
       inauguralTitle: "INAUGURAL",
       activitiesWorkshopsTitle: "ACTIVITIES & WORKSHOPS",
+      venue1: "VENUE : NEW SEMINAR HALL",
+      venue2: "VENUE: SAC HALL",
+
       lunchTitle: "LUNCH FOR GUESTS",
       afternoonWorkshopsTitle: "STAGE ACTIVITIES",
       stageActivitiesTitle: "GUESTS RETURN",
@@ -221,6 +224,8 @@ export const resources = {
       lunchTitle: "昼食",
       afternoonWorkshopsTitle: "午後の活動とワークショップ",
       stageActivitiesTitle: "ステージ活動",
+      venue1: " 会場：新セミナーホール",
+      venue2: "会場：SACホール",
       guestsArrivalDesc:
         "ゲストが会場に到着し、イベントの準備が始まります。この期間中、参加者は歓迎され、席に案内されます。",
       inauguralDesc:
