@@ -144,9 +144,9 @@ export function TimelineDemo2() {
       ),
     },
     {
-      title: "5:30 PM",
+      title: "5:30 PM ",
       content: (
-        <div className="">
+        <div className=" ">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
             {t("conclusionTitle")}
           </h1>
