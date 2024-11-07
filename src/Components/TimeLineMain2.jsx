@@ -10,10 +10,10 @@ export function TimelineDemo2() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("guestsArrivalDay2Title")}
+            {t("guestsArrivalDay2Title")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
-            <TextGenerateEffect words={t("guestsArrivalDay2Desc")}/>
+            <TextGenerateEffect words={t("guestsArrivalDay2Desc")} />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
@@ -35,7 +35,7 @@ export function TimelineDemo2() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("discussionForumTitle")}
+            {t("discussionForumTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("discussionForumDesc")} />
@@ -60,7 +60,7 @@ export function TimelineDemo2() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("lunchTitleDay2")}
+            {t("lunchTitleDay2")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("lunchDescDay2")} />
@@ -85,11 +85,11 @@ export function TimelineDemo2() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("afternoonWorkshopsTitleDay2")}
+            {t("afternoonWorkshopsTitleDay2")}
           </h1>
           <br></br>
           <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-teal-600 inline-block text-transparent bg-clip-text mb-6">
-          {t("venue2")}
+            {t("venue2")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("afternoonWorkshopsDescDay2")} />
@@ -114,11 +114,11 @@ export function TimelineDemo2() {
       content: (
         <div>
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("movieScreeningTitle")}
+            {t("movieScreeningTitle")}
           </h1>
           <br></br>
           <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-teal-600 inline-block text-transparent bg-clip-text mb-6">
-          {t("venue1")}
+            {t("venue1")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("movieScreeningDesc")} />
@@ -131,6 +131,7 @@ export function TimelineDemo2() {
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow"
             />
+
             <img
               src="/assets/images/MO2.webp"
               alt="feature template"
@@ -147,7 +148,7 @@ export function TimelineDemo2() {
       content: (
         <div className="">
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-6">
-          {t("conclusionTitle")}
+            {t("conclusionTitle")}
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-balance text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-8 max-w-4xl mx-auto">
             <TextGenerateEffect words={t("conclusionDesc")} />
